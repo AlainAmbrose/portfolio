@@ -1,11 +1,53 @@
 body {
-  background-color: lightblue;
+  background-color: #0E2C04;
+  margin: 0;
+  font-family: 'JetBrains Mono', monospace;
 }
 
-.Content-div {
-  position: absolute;
-  height: 90%;
-  width: 90%;
-  background-color: #00f;
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('./fonts/ttf/JetBrainsMono-Regular.ttf') format('truetype');
 }
 
+ul {
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+}
+
+.navigation {
+  position: relative;
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+  text-align: right;
+  width: 95%;
+}
+
+.navLi {
+  cursor: pointer;
+  margin-top: 2rem;
+}
+
+.navLi:hover a {
+  color: transparent; 
+  -webkit-text-stroke: .1px #0E2C04;
+}
+
+.navigation a {
+  position: relative;
+  color: #0E2C04;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-style: normal;
+  font-stretch: normal;
+  font-size: 5vw;
+  letter-spacing: .02em;
+  line-height: .9em;
+  transition: color .5s,opacity .5s;
+}
