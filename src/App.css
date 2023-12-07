@@ -10,19 +10,19 @@ body {
 }
 
 ul {
-  display: block;
-  list-style-type: disc;
-  margin-block-start: 1em;
+  /* display: block; */
+  /* list-style-type: disc; */
+  /* margin-block-start: 1em;
   margin-block-end: 1em;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
-  padding-inline-start: 40px;
+  padding-inline-start: 40px; */
 }
 
 .navigation {
   position: relative;
-  margin: 0;
-  padding-left: 0;
+  /* margin: 0;
+  padding-left: 0; */
   list-style: none;
   text-align: right;
   width: 95%;
@@ -34,8 +34,8 @@ ul {
 }
 
 .navLi:hover a {
-  color: transparent; 
-  -webkit-text-stroke: .1px #0E2C04;
+  color: #0E2C04; 
+  opacity: .5;
 }
 
 .navigation a {
@@ -50,4 +50,13 @@ ul {
   letter-spacing: .02em;
   line-height: .9em;
   transition: color .5s,opacity .5s;
+}
+
+header h1, h2, img {
+  margin: 0;
+}
+
+h1 {
+  font-size: 3vw;
+  color: #0E2C04;
 }
