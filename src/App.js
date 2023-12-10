@@ -2,7 +2,9 @@ import "./App.css";
 import MainContentBox from "./components/MainContentBox.js";
 
 function App() {
-  return <MainContentBox />;
+  return (
+  <MainContentBox />
+  );
 }
 
 export default App;
