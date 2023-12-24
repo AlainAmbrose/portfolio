@@ -23,8 +23,8 @@ body {
   margin-top: 2rem;
 }
 
-.navLi:hover a {
-  color: #0E2C04; 
+.navLi a:hover {
+  color: #0E2C04;
   opacity: .5;
 }
 
@@ -42,7 +42,7 @@ body {
   transition: color .5s,opacity .5s;
 }
 
-header h1, h2, img {
+header h1, h2, img, p {
   margin: 0;
 }
 
