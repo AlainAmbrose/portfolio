@@ -3,19 +3,7 @@ import GitHubSVG from "../images/GitHub.svg";
 import LinkedInSVG from "../images/LinkedIn.svg";
 import InstagramSVG from "../images/Instagram.svg";
 
-function Content() {
-  const boxStyle = {
-    margin: "2.5vh",
-    padding: "30px",
-    height: "95vh",
-    boxSizing: "border-box",
-    borderRadius: "10px",
-    backgroundColor: "#f0f0f0",
-    opacity: 0.5,
-    display: "flex",
-    justifyContent: "space-between",
-  };
-
+function AboutPage() {
   const leftDivStyle = {
     flex: "0 0 48%",
     display: "flex",
@@ -32,7 +20,7 @@ function Content() {
   };
 
   return (
-    <div style={boxStyle}>
+    <div className="backgroundBox">
       <div style={leftDivStyle}>
         <div style={{ flex: "0 0 85%" }}>
           <img
@@ -71,24 +59,11 @@ function Content() {
       </div>
       <div style={rightDivStyle}>
         <div>
-          <ul className="navigation">
-            <li className="navLi">
-              <a>About</a>
-            </li>
-            <li className="navLi">
-              <a>Skills</a>
-            </li>
-            <li className="navLi">
-              <a>Projects</a>
-            </li>
-            <li className="navLi">
-              <a>Experience</a>
-            </li>
-          </ul>
+          <h1>ABOUT PAGE!!!</h1>
         </div>
       </div>
     </div>
   );
 }
 
-export default Content;
+export default AboutPage;
