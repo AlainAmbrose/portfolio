@@ -18,12 +18,29 @@ body {
   /* width: 50%; */
 }
 
+.backgroundBox {
+  margin: 2.5vh;
+  padding: 30px;
+  height: 95vh;
+  box-sizing: border-box;
+  border-radius: 10px;
+  background-color: #f0f0f0;
+  opacity: 0.5;
+  display: flex;
+  justify-content: space-between;
+}
+
 .navLi {
   cursor: pointer;
   margin-top: 2rem;
 }
 
 .navLi a:hover {
+  color: #0E2C04;
+  opacity: .5;
+}
+
+.navLi button:hover {
   color: #0E2C04;
   opacity: .5;
 }
@@ -40,6 +57,22 @@ body {
   letter-spacing: .02em;
   line-height: .9em;
   transition: color .5s,opacity .5s;
+}
+
+.navigation button {
+  position: relative;
+  color: #0E2C04;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: 'JetBrains Mono';
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  font-size: 5vw;
+  letter-spacing: .02em;
+  line-height: .9em;
+  transition: color .5s, opacity .5s;
+  border: none;
 }
 
 header h1, h2, img, p {
