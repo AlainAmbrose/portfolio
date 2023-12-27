@@ -75,12 +75,13 @@ body {
   border: none;
 }
 
-header h1, h2, img, p {
+header h2, img, p {
   margin: 0;
 }
 
 h1 {
   margin: 0;
+  font-size: 3vw;
   color: #0E2C04;
 }
 
@@ -88,3 +89,12 @@ img {
   height:auto;
   width: auto;
 }
+
+/* .nav-indicator {
+  display: inline-block;
+  position: relative;
+  margin-right: 4px;
+  height: 15px;
+  width: 150px;
+  background-color: #4b5563;
+} */
