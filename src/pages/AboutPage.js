@@ -17,21 +17,50 @@ function AboutPage() {
     display: "flex",
     flexDirection: "column",
     justifyContent: "flex-end",
+    overflow: "scroll",
+  };
+
+  const descriptionStyle = {
+    flex: "0 0 70%",
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "left",
   };
 
   return (
     <div className="backgroundBox">
       <div style={leftDivStyle}>
-        <div style={{ flex: "0 0 85%" }}>
-          <img
-            src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=30&pause=1000&color=0E2C04&random=false&width=250&height=50&lines=Hi%2C+I'm;Hola%2C+soy;%E4%BD%A0%E5%A5%BD%EF%BC%8C%E6%88%91%E6%98%AF+;Salut%2C+je+suis;%D0%9F%D1%80%D0%B8%D0%B2%D0%B5%D1%82%2C+%D1%8F"
-            alt="Typing SVG"
-          />
-          <h1> Alain Ambrose </h1>
+        <div style={{ flex: "0 0 15%" }}>
+          <h1 style={{ fontSize: "5vw", fontWeight: "800" }}> ABOUT </h1>
         </div>
-        <div>
-          <p>Orlando, FL</p>
-          <p>ambrosealain@gmail.com</p>
+        <div style={descriptionStyle}>
+          <div style={{ flex: "0 0 70%" }}>
+            <p
+              style={{
+                fontSize: "2.2vw",
+                fontWeight: "bold",
+                marginBottom: "1rem",
+                color: "#0E2C04",
+              }}
+            >
+              Hey! I’m a student studying computer science at the University of
+              Central Florida
+            </p>
+            <p
+              style={{
+                color: "#0E2C04",
+              }}
+            >
+              Born in Queens, NY but raised in Fort Lauderdale, FL I have always
+              had a love for learning and solving problems. I started seriously
+              applying this love for learning to computer science concepts right
+              before college. Since that point I have worked every day to get
+              better with my problem solving, critical thinking, communication
+              skills, and teamwork. I'm committed to putting in effort to learn
+              through work experience and am looking forward to growing as I
+              move forward.
+            </p>
+          </div>
         </div>
         <div>
           <a href="https://www.github.com/AlainAmbrose">
@@ -58,9 +87,7 @@ function AboutPage() {
         </div>
       </div>
       <div style={rightDivStyle}>
-        <div>
-          <h1>ABOUT PAGE!!!</h1>
-        </div>
+        <div></div>
       </div>
     </div>
   );
