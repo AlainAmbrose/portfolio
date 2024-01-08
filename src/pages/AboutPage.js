@@ -16,7 +16,7 @@ function AboutPage() {
     flex: "0 0 48%",
     display: "flex",
     flexDirection: "column",
-    justifyContent: "flex-end",
+    justifyContent: "flex-start",
     overflow: "scroll",
   };
 
@@ -25,6 +25,14 @@ function AboutPage() {
     display: "flex",
     flexDirection: "row",
     justifyContent: "left",
+  };
+
+  const aboutContentStyle = {
+    flex: "0 0 70%",
+    display: "flex",
+    flexDirection: "column",
+    textAlign: "right",
+    marginRight: "25px",
   };
 
   return (
@@ -87,7 +95,35 @@ function AboutPage() {
         </div>
       </div>
       <div style={rightDivStyle}>
-        <div></div>
+        <div style={aboutContentStyle}>
+          <h1>Coursework</h1>
+          <section id="coursework">
+            <ul className="info-list">
+              <li>Data Structures and Algorithms </li>
+              <li>Security in Computing</li>
+              <li>Object Oriented Programming</li>
+              <li>Algorithms for Machine Learning</li>
+              <li>Software Engineering</li>
+            </ul>
+          </section>
+          <h1>Awards</h1>
+          <section id="awards">
+            <ul className="info-list">
+              <li>Pegasus Gold Scholarship </li>
+              <li>CECS Dean’s List</li>
+              <li>CECS President’s Honor Roll</li>
+              <li>Hack Georgia Tech Division Winner</li>
+            </ul>
+          </section>
+          <h1>Hobbies</h1>
+          <section id="hobbies">
+            <ul className="info-list">
+              <li>Skateboarding</li>
+              <li>Music</li>
+              <li>Competetive Programming</li>
+            </ul>
+          </section>
+        </div>
       </div>
     </div>
   );

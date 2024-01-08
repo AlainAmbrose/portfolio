@@ -15,7 +15,6 @@ body {
   padding-left: 0;
   list-style: none;
   text-align: right;
-  /* width: 50%; */
 }
 
 .backgroundBox {
@@ -73,6 +72,7 @@ body {
   line-height: .9em;
   transition: color .5s, opacity .5s;
   border: none;
+  background-color: transparent;
 }
 
 header h2, img, p {
@@ -90,11 +90,11 @@ img {
   width: auto;
 }
 
-/* .nav-indicator {
-  display: inline-block;
-  position: relative;
-  margin-right: 4px;
-  height: 15px;
-  width: 150px;
-  background-color: #4b5563;
-} */
+.info-list {
+  list-style: none;
+}
+
+.info-list li {
+  font-size: 1.7vw;
+  margin-top: 2rem; 
+}
