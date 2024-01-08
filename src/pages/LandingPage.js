@@ -68,7 +68,7 @@ function LandingPage() {
         </div>
       </div>
       <div style={rightDivStyle}>
-        <div>
+        <nav>
           <ul className="navigation">
             <li className="navLi">
               <button
@@ -103,7 +103,7 @@ function LandingPage() {
               </button>
             </li>
           </ul>
-        </div>
+        </nav>
       </div>
     </div>
   );
