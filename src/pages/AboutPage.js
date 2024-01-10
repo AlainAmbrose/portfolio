@@ -118,8 +118,8 @@ function AboutPage() {
           <h1>Hobbies</h1>
           <section id="hobbies">
             <ul className="info-list">
-              <li>Skateboarding</li>
               <li>Music</li>
+              <li>Skateboarding</li>
               <li>Competetive Programming</li>
             </ul>
           </section>
