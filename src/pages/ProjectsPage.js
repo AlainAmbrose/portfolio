@@ -2,8 +2,9 @@ import "../App.css";
 import GitHubSVG from "../images/GitHub.svg";
 import LinkedInSVG from "../images/LinkedIn.svg";
 import InstagramSVG from "../images/Instagram.svg";
+import ProjectCard from "../components/ProjectCard";
 
-function AboutPage() {
+function ProjectsPage() {
   const leftDivStyle = {
     flex: "0 0 48%",
     display: "flex",
@@ -66,10 +67,10 @@ function AboutPage() {
         </div>
       </div>
       <div style={rightDivStyle}>
-        <p>Project Content</p>
+        <ProjectCard aspectHeight={"50px"} aspectWidth={"75px"} />
       </div>
     </div>
   );
 }
 
-export default AboutPage;
+export default ProjectsPage;
