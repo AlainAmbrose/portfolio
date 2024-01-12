@@ -3,7 +3,7 @@ import GitHubSVG from "../images/GitHub.svg";
 import LinkedInSVG from "../images/LinkedIn.svg";
 import InstagramSVG from "../images/Instagram.svg";
 
-function AboutPage() {
+function ExperiencePage() {
   const leftDivStyle = {
     flex: "0 0 48%",
     display: "flex",
@@ -72,4 +72,4 @@ function AboutPage() {
   );
 }
 
-export default AboutPage;
+export default ExperiencePage;

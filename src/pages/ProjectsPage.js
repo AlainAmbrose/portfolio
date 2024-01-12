@@ -3,71 +3,51 @@ import GitHubSVG from "../images/GitHub.svg";
 import LinkedInSVG from "../images/LinkedIn.svg";
 import InstagramSVG from "../images/Instagram.svg";
 import ProjectCard from "../components/ProjectCard";
+import { ChevronLeftIcon } from "@heroicons/react/20/solid";
+import { useNavigate } from "react-router-dom";
 
 function ProjectsPage() {
-  const leftDivStyle = {
-    flex: "0 0 48%",
+  const navigate = useNavigate();
+
+  const topDivStyle = {
     display: "flex",
     backgroundColor: "#f0f0f0",
-    flexDirection: "column",
+    flexDirection: "row",
     justifyContent: "space-between",
   };
 
-  const rightDivStyle = {
-    flex: "0 0 48%",
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "flex-start",
-    overflow: "scroll",
-  };
-
-  const descriptionStyle = {
-    flex: "0 0 70%",
+  const bottomDivStyle = {
+    flex: "0 0 80%",
     display: "flex",
     flexDirection: "row",
-    justifyContent: "left",
-  };
-
-  const aboutContentStyle = {
-    flex: "0 0 70%",
-    display: "flex",
-    flexDirection: "column",
-    textAlign: "right",
-    marginRight: "25px",
+    justifyContent: "space-between",
+    overflow: "scroll",
+    flexWrap: "wrap",
   };
 
   return (
-    <div className="backgroundBox">
-      <div style={leftDivStyle}>
+    <div className="backgroundBox" style={{ flexDirection: "Column" }}>
+      <div style={topDivStyle}>
         <div style={{ flex: "0 0 15%" }}>
           <h1 style={{ fontSize: "5vw", fontWeight: "800" }}> PROJECTS </h1>
         </div>
-        <div>
-          <a href="https://www.github.com/AlainAmbrose">
-            <img
-              src={GitHubSVG}
-              alt="GitHub Link"
-              style={{ marginRight: "10px", height: "50px", width: "50px" }}
-            />
-          </a>
-          <a href="https://www.linkedin.com/in/alain-ambrose">
-            <img
-              src={LinkedInSVG}
-              alt="LinkedIn Link"
-              style={{ marginRight: "10px", height: "50px", width: "50px" }}
-            />
-          </a>
-          <a href="https://www.instagram.com/alainambrose911/">
-            <img
-              src={InstagramSVG}
-              alt="Instagram Link"
-              style={{ marginRight: "10px", height: "50px", width: "50px" }}
-            />
-          </a>
-        </div>
+        <button
+          style={{ height: "75px", width: "75px" }}
+          onClick={() => navigate("/")}
+        >
+          <ChevronLeftIcon
+            style={{ height: "75px", width: "75px" }}
+            aria-hidden="true"
+          />
+        </button>
       </div>
-      <div style={rightDivStyle}>
-        <ProjectCard aspectHeight={"50px"} aspectWidth={"75px"} />
+      <div style={bottomDivStyle}>
+        <ProjectCard project={"placeholder"} />
+        <ProjectCard />
+        <ProjectCard />
+        <ProjectCard />
+        <ProjectCard />
+        <ProjectCard />
       </div>
     </div>
   );

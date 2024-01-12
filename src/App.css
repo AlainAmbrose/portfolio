@@ -75,6 +75,13 @@ body {
   background-color: transparent;
 }
 
+button {
+  outline: none;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
 header h2, img, p {
   margin: 0;
 }
