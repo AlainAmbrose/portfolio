@@ -29,6 +29,12 @@ function LandingPage() {
     justifyContent: "flex-end",
   };
 
+  const contactNavStyle = {
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "flex-start",
+  };
+
   return (
     <div className="backgroundBox">
       <div style={leftDivStyle}>
@@ -39,32 +45,34 @@ function LandingPage() {
           />
           <h1> Alain Ambrose </h1>
         </div>
-        <div>
-          <p>Orlando, FL</p>
-          <p>ambrosealain@gmail.com</p>
-        </div>
-        <div>
-          <a href="https://www.github.com/AlainAmbrose">
-            <img
-              src={GitHubSVG}
-              alt="GitHub Link"
-              style={{ marginRight: "10px", height: "50px", width: "50px" }}
-            />
-          </a>
-          <a href="https://www.linkedin.com/in/alain-ambrose">
-            <img
-              src={LinkedInSVG}
-              alt="LinkedIn Link"
-              style={{ marginRight: "10px", height: "50px", width: "50px" }}
-            />
-          </a>
-          <a href="https://www.instagram.com/alainambrose911/">
-            <img
-              src={InstagramSVG}
-              alt="Instagram Link"
-              style={{ marginRight: "10px", height: "50px", width: "50px" }}
-            />
-          </a>
+        <div style={contactNavStyle}>
+          <div>
+            <a href="https://www.github.com/AlainAmbrose">
+              <img
+                src={GitHubSVG}
+                alt="GitHub Link"
+                style={{ marginRight: "10px", height: "50px", width: "50px" }}
+              />
+            </a>
+            <a href="https://www.linkedin.com/in/alain-ambrose">
+              <img
+                src={LinkedInSVG}
+                alt="LinkedIn Link"
+                style={{ marginRight: "10px", height: "50px", width: "50px" }}
+              />
+            </a>
+            <a href="https://www.instagram.com/alainambrose911/">
+              <img
+                src={InstagramSVG}
+                alt="Instagram Link"
+                style={{ marginRight: "10px", height: "50px", width: "50px" }}
+              />
+            </a>
+          </div>
+          <div>
+            <p>Orlando, FL</p>
+            <p>ambrosealain@gmail.com</p>
+          </div>
         </div>
       </div>
       <div style={rightDivStyle}>

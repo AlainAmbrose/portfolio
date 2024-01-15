@@ -2,8 +2,12 @@ import "../App.css";
 import GitHubSVG from "../images/GitHub.svg";
 import LinkedInSVG from "../images/LinkedIn.svg";
 import InstagramSVG from "../images/Instagram.svg";
+import { ChevronLeftIcon } from "@heroicons/react/20/solid";
+import { useNavigate } from "react-router-dom";
 
 function AboutPage() {
+  const navigate = useNavigate();
+
   const leftDivStyle = {
     flex: "0 0 48%",
     display: "flex",
