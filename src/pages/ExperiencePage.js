@@ -7,7 +7,6 @@ function ExperiencePage() {
   const leftDivStyle = {
     flex: "0 0 48%",
     display: "flex",
-    backgroundColor: "#f0f0f0",
     flexDirection: "column",
     justifyContent: "space-between",
   };

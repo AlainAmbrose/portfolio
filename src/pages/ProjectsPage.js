@@ -11,7 +11,6 @@ function ProjectsPage() {
 
   const topDivStyle = {
     display: "flex",
-    backgroundColor: "#f0f0f0",
     flexDirection: "row",
     justifyContent: "space-between",
   };
@@ -42,12 +41,12 @@ function ProjectsPage() {
         </button>
       </div>
       <div style={bottomDivStyle}>
-        <ProjectCard project={"placeholder"} />
-        <ProjectCard />
-        <ProjectCard />
-        <ProjectCard />
-        <ProjectCard />
-        <ProjectCard />
+        <ProjectCard project={"placeholder"} color={"#ffffff"} />
+        <ProjectCard color={"#ffffff"} />
+        <ProjectCard color={"#ffffff"} />
+        <ProjectCard color={"#ffffff"} />
+        <ProjectCard color={"#ffffff"} />
+        <ProjectCard color={"#ffffff"} />
       </div>
     </div>
   );

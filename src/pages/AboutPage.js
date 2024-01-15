@@ -11,7 +11,6 @@ function AboutPage() {
   const leftDivStyle = {
     flex: "0 0 48%",
     display: "flex",
-    backgroundColor: "#f0f0f0",
     flexDirection: "column",
     justifyContent: "space-between",
   };
@@ -52,17 +51,12 @@ function AboutPage() {
                 fontSize: "2.2vw",
                 fontWeight: "bold",
                 marginBottom: "1rem",
-                color: "#0E2C04",
               }}
             >
               Hey! I’m a student studying computer science at the University of
               Central Florida
             </p>
-            <p
-              style={{
-                color: "#0E2C04",
-              }}
-            >
+            <p>
               Born in Queens, NY but raised in Fort Lauderdale, FL I have always
               had a love for learning and solving problems. I started seriously
               applying this love for learning to computer science concepts right
