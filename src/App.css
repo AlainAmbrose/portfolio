@@ -1,7 +1,47 @@
-body {
+/* body {
   background-color: #0E2C04;
   margin: 0;
   font-family: 'JetBrains Mono', monospace;
+} */
+
+/* body {
+	background: linear-gradient(-45deg, #0E2C04, #26730a, #144104);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+  font-family: 'JetBrains Mono', monospace;
+  margin: 0;
+} */
+
+/* darkmode */
+/* body {
+	background: linear-gradient(-45deg, #000000, #4b5548, #000000);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+  font-family: 'JetBrains Mono', monospace;
+  margin: 0;
+} */
+
+/* lightmode */
+body {
+	background: linear-gradient(-45deg, #41583a00, #114502d7, #01460100);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+  font-family: 'JetBrains Mono', monospace;
+  margin: 0;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 
 @font-face {
@@ -17,7 +57,8 @@ body {
   text-align: right;
 }
 
-.backgroundBox {
+/* lightmode */
+/* .backgroundBox {
   margin: 2.5vh;
   padding: 30px;
   height: 95vh;
@@ -27,6 +68,25 @@ body {
   opacity: 0.5;
   display: flex;
   justify-content: space-between;
+} */
+
+/* darkmode */
+.backgroundBox {
+  margin: 2.5vh;
+  padding: 30px;
+  height: 95vh;
+  box-sizing: border-box;
+  border-radius: 10px;
+  background-color: #0E2C04;
+  opacity: 0.2;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 10px 10px 10px rgb(10, 0, 0);
+}
+
+.typewrite {
+  font-size: 2vw;
+  margin-bottom: 1rem;
 }
 
 .navLi {
@@ -39,8 +99,15 @@ body {
   opacity: .5;
 }
 
-.navLi button:hover {
+/*lightmode*/
+/* .navLi button:hover {
   color: #0E2C04;
+  opacity: .5;
+} */
+
+/*darkmode*/
+.navLi button:hover {
+  color: #FFFFFF;
   opacity: .5;
 }
 
@@ -60,7 +127,6 @@ body {
 
 .navigation button {
   position: relative;
-  color: #0E2C04;
   text-decoration: none;
   text-transform: uppercase;
   font-family: 'JetBrains Mono';
@@ -82,20 +148,22 @@ button {
   cursor: pointer;
 }
 
-header h2, img, p {
+/*light*/
+/* header, h1, h2, img, p, li, button {
   margin: 0;
   color: #0E2C04;
+} */
+
+/*dark*/
+header, h1, h2, img, p, li, button {
+  margin: 0;
+  color: #ffffff;
+  opacity: 1;
 }
 
 h1 {
   margin: 0;
   font-size: 3vw;
-  color: #0E2C04;
-}
-
-img {
-  height:auto;
-  width: auto;
 }
 
 .info-list {
