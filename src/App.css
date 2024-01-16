@@ -27,6 +27,7 @@
 body {
 	background: linear-gradient(-45deg, #41583a00, #114502d7, #01460100);
 	background-size: 400% 400%;
+  overflow: hidden;
 	animation: gradient 15s ease infinite;
   font-family: 'JetBrains Mono', monospace;
   margin: 0;
@@ -96,8 +97,12 @@ body {
 
 .navLi a:hover {
   color: #0E2C04;
-  opacity: .5;
+  /* opacity: .5; */
+  -webkit-background-clip: text;
+     -moz-background-clip: text;
+          background-clip: text;
 }
+
 
 /*lightmode*/
 /* .navLi button:hover {
@@ -108,7 +113,16 @@ body {
 /*darkmode*/
 .navLi button:hover {
   color: #FFFFFF;
+  opacity: 1;
+}
+
+img:hover {
   opacity: .5;
+}
+
+.navLi button {
+  color: transparent;
+  text-shadow: 0px 2px 0px rgba(255,255,255,.5);
 }
 
 .navigation a {
@@ -158,6 +172,7 @@ button {
 header, h1, h2, img, p, li, button {
   margin: 0;
   color: #ffffff;
+  transition: color .5s, opacity .5s;
   opacity: 1;
 }
 

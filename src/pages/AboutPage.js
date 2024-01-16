@@ -2,6 +2,9 @@ import "../App.css";
 import GitHubSVG from "../images/GitHub.svg";
 import LinkedInSVG from "../images/LinkedIn.svg";
 import InstagramSVG from "../images/Instagram.svg";
+import GitHubWhite from "../images/GitHub-White.svg";
+import LinkedInWhite from "../images/LinkedIn-White.svg";
+import InstagramWhite from "../images/Instagram-White.svg";
 import { ChevronLeftIcon } from "@heroicons/react/20/solid";
 import { useNavigate } from "react-router-dom";
 
@@ -71,21 +74,21 @@ function AboutPage() {
         <div>
           <a href="https://www.github.com/AlainAmbrose">
             <img
-              src={GitHubSVG}
+              src={GitHubWhite}
               alt="GitHub Link"
               style={{ marginRight: "10px", height: "50px", width: "50px" }}
             />
           </a>
           <a href="https://www.linkedin.com/in/alain-ambrose">
             <img
-              src={LinkedInSVG}
+              src={LinkedInWhite}
               alt="LinkedIn Link"
               style={{ marginRight: "10px", height: "50px", width: "50px" }}
             />
           </a>
           <a href="https://www.instagram.com/alainambrose911/">
             <img
-              src={InstagramSVG}
+              src={InstagramWhite}
               alt="Instagram Link"
               style={{ marginRight: "10px", height: "50px", width: "50px" }}
             />
