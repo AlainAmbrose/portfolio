@@ -41,7 +41,11 @@ function ProjectsPage() {
         </button>
       </div>
       <div style={bottomDivStyle}>
-        <ProjectCard project={"placeholder"} color={"#ffffff"} />
+        <ProjectCard
+          project={"placeholder"}
+          title={"TopTier"}
+          color={"#ffffff"}
+        />
         <ProjectCard color={"#ffffff"} />
         <ProjectCard color={"#ffffff"} />
         <ProjectCard color={"#ffffff"} />

@@ -2,9 +2,12 @@ import "../App.css";
 import GitHubSVG from "../images/GitHub.svg";
 import LinkedInSVG from "../images/LinkedIn.svg";
 import InstagramSVG from "../images/Instagram.svg";
+import SunGreen from "../images/Sun-Green.svg";
 import GitHubWhite from "../images/GitHub-White.svg";
 import LinkedInWhite from "../images/LinkedIn-White.svg";
 import InstagramWhite from "../images/Instagram-White.svg";
+import SunWhite from "../images/Sun-White.svg";
+import MoonWhite from "../images/Moon-White.png";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 
@@ -86,7 +89,7 @@ function LandingPage() {
     flex: "0 0 48%",
     display: "flex",
     flexDirection: "column",
-    justifyContent: "flex-end",
+    justifyContent: "space-between",
   };
 
   const contactNavStyle = {
@@ -99,10 +102,10 @@ function LandingPage() {
     <div className="backgroundBox">
       <div style={leftDivStyle}>
         <div style={{ flex: "0 0 80%" }}>
-          {/* <img
-            src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=30&pause=1000&color=0E2C04&random=false&width=250&height=50&lines=Hi%2C+I'm;Hola%2C+soy;%E4%BD%A0%E5%A5%BD%EF%BC%8C%E6%88%91%E6%98%AF+;Salut%2C+je+suis;%D0%9F%D1%80%D0%B8%D0%B2%D0%B5%D1%82%2C+%D1%8F"
+          <img
+            src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=30&pause=1000&color=ffffff&random=false&width=250&height=50&lines=Hi%2C+I'm;Hola%2C+soy;%E4%BD%A0%E5%A5%BD%EF%BC%8C%E6%88%91%E6%98%AF+;Salut%2C+je+suis;%D0%9F%D1%80%D0%B8%D0%B2%D0%B5%D1%82%2C+%D1%8F"
             alt="Typing SVG"
-          /> */}
+          />
           {/* <p
             className="typewrite"
             data-period="2000"
@@ -110,7 +113,7 @@ function LandingPage() {
           >
             <span className="wrap"></span>
           </p> */}
-          <p className="typewrite">Hi, Im</p>
+          {/* <p className="typewrite">Hi, Im</p> */}
           <h1> Alain Ambrose </h1>
         </div>
         <div style={contactNavStyle}>
@@ -144,6 +147,22 @@ function LandingPage() {
         </div>
       </div>
       <div style={rightDivStyle}>
+        <div style={{ flex: "0 0 10%", textAlign: "right" }}>
+          <a>
+            <img
+              src={SunWhite}
+              alt="Lightmode"
+              style={{ marginRight: "10px", height: "25px", width: "25px" }}
+            />
+          </a>
+          <a>
+            <img
+              src={MoonWhite}
+              alt="Lightmode"
+              style={{ marginRight: "10px", height: "25px", width: "25px" }}
+            />
+          </a>
+        </div>
         <nav>
           <ul className="navigation">
             <li className="navLi">
