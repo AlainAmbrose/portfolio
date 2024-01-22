@@ -173,14 +173,14 @@ function LandingPage() {
                 About
               </button>
             </li>
-            <li className="navLi">
+            {/* <li className="navLi">
               <button
                 type="button"
                 onClick={(event) => handleNavClick(event, "skills")}
               >
                 Skills
               </button>
-            </li>
+            </li> */}
             <li className="navLi">
               <button
                 type="button"
