@@ -19,7 +19,7 @@ function ProjectsPage() {
     flex: "0 0 80%",
     display: "flex",
     flexDirection: "row",
-    justifyContent: "space-between",
+    // justifyContent: "space-between",
     overflow: "scroll",
     flexWrap: "wrap",
   };
