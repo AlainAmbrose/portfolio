@@ -5,15 +5,18 @@ import "../App.css";
 const ProjectCard = ({ project, height, width, color, title }) => {
   const cardStyle = {
     height: "35vh",
+    width: "70vh",
     backgroundColor: color,
     borderRadius: "10px",
-    flex: "0 0 49%",
+    // flex: "0 0 49%",
     marginBottom: "30px",
+    marginLeft: "30px",
+    padding: "10px",
   };
 
   return (
     <div style={cardStyle}>
-      {/* <p style={{ color: "#0E2C04" }}>{title}</p> */}
+      <p style={{ color: "#0E2C04" }}>{title}</p>
     </div>
   );
 };

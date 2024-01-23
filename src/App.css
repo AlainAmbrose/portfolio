@@ -50,14 +50,6 @@ body {
   src: url('./fonts/ttf/JetBrainsMono-Regular.ttf') format('truetype');
 }
 
-.navigation {
-  position: relative;
-  margin: 0;
-  padding-left: 0;
-  list-style: none;
-  text-align: right;
-}
-
 /* lightmode */
 /* .backgroundBox {
   margin: 2.5vh;
@@ -90,39 +82,12 @@ body {
   margin-bottom: 1rem;
 }
 
-.navLi {
-  cursor: pointer;
-  margin-top: 2rem;
-}
-
-.navLi a:hover {
-  color: #0E2C04;
-  /* opacity: .5; */
-  -webkit-background-clip: text;
-     -moz-background-clip: text;
-          background-clip: text;
-}
-
-
-/*lightmode*/
-/* .navLi button:hover {
-  color: #0E2C04;
-  opacity: .5;
-} */
-
-/*darkmode*/
-.navLi button:hover {
-  color: #FFFFFF;
-  opacity: 1;
-}
-
-img:hover {
-  opacity: .5;
-}
-
-.navLi button {
-  color: transparent;
-  text-shadow: 0px 2px 0px rgba(255,255,255,.5);
+.navigation {
+  position: relative;
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+  text-align: right;
 }
 
 .navigation a {
@@ -155,11 +120,77 @@ img:hover {
   background-color: transparent;
 }
 
+.navLi {
+  cursor: pointer;
+  margin-top: 2rem;
+}
+
+.navLi button:hover {
+  color: #FFFFFF;
+  opacity: 1;
+}
+
+.navLi button {
+  color: transparent;
+  text-shadow: 0px 2px 0px rgba(255,255,255,.5);
+}
+
+
+.skills {
+  position: relative;
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.skillsLi {
+  cursor: pointer;
+  margin-bottom: 2rem;
+}
+
+/*lightmode*/
+/* .navLi button:hover {
+  color: #0E2C04;
+  opacity: .5;
+} */
+
+/*darkmode*/
+
+.skillsLi button:hover {
+  color: #FFFFFF;
+  opacity: 1;
+}
+
+.skillsLi button {
+  color: transparent;
+  text-shadow: 0px 2px 0px rgba(255,255,255,.5);
+}
+
+.skills button {
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: 'JetBrains Mono';
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  font-size: 2.5vw;
+  letter-spacing: .02em;
+  line-height: .9em;
+  transition: color .5s, opacity .5s;
+  border: none;
+  background-color: transparent;
+}
+
 button {
   outline: none;
   border: none;
   background: transparent;
   cursor: pointer;
+}
+
+img:hover {
+  opacity: .5;
 }
 
 /*light*/

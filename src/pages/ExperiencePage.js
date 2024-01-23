@@ -11,6 +11,11 @@ import SunWhite from "../images/Sun-White.svg";
 import MoonWhite from "../images/Moon-White.png";
 
 function ExperiencePage() {
+  const handleNavClick = (event, location) => {
+    event.preventDefault();
+    // navigate(`/${location}`);
+  };
+
   const leftDivStyle = {
     flex: "0 0 38%",
     display: "flex",
@@ -26,7 +31,7 @@ function ExperiencePage() {
     overflow: "scroll",
   };
 
-  const descriptionStyle = {
+  const skillsStyle = {
     flex: "0 0 70%",
     display: "flex",
     flexDirection: "row",
@@ -47,8 +52,35 @@ function ExperiencePage() {
         <div style={{ flex: "0 0 15%" }}>
           <h1 style={{ fontSize: "5vw", fontWeight: "800" }}> EXPERIENCE </h1>
         </div>
-        <div style={descriptionStyle}>
-          <div style={{ flex: "0 0 70%" }}></div>
+        <div style={skillsStyle}>
+          <div style={{ flex: "0 0 70%" }}>
+            <ul className="skills">
+              <li className="skillsLi">
+                <button
+                  type="button"
+                  onClick={(event) => handleNavClick(event, "about")}
+                >
+                  Languages
+                </button>
+              </li>
+              <li className="skillsLi">
+                <button
+                  type="button"
+                  onClick={(event) => handleNavClick(event, "projects")}
+                >
+                  Technologies
+                </button>
+              </li>
+              <li className="skillsLi">
+                <button
+                  type="button"
+                  onClick={(event) => handleNavClick(event, "experience")}
+                >
+                  Philosophies
+                </button>
+              </li>
+            </ul>
+          </div>
         </div>
         <div>
           <a href="https://www.github.com/AlainAmbrose">
