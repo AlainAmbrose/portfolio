@@ -9,11 +9,19 @@ import LinkedInWhite from "../images/LinkedIn-White.svg";
 import InstagramWhite from "../images/Instagram-White.svg";
 import SunWhite from "../images/Sun-White.svg";
 import MoonWhite from "../images/Moon-White.png";
+import React, { useState } from "react";
 
 function ExperiencePage() {
-  const handleNavClick = (event, location) => {
-    event.preventDefault();
-    // navigate(`/${location}`);
+  const [isParagraphVisible, setIsParagraphVisible] = useState([
+    false,
+    false,
+    false,
+  ]);
+
+  const toggleVisibility = (index) => {
+    const updatedVisibility = [...isParagraphVisible];
+    updatedVisibility[index] = !updatedVisibility[index];
+    setIsParagraphVisible(updatedVisibility);
   };
 
   const leftDivStyle = {
@@ -56,28 +64,22 @@ function ExperiencePage() {
           <div style={{ flex: "0 0 70%" }}>
             <ul className="skills">
               <li className="skillsLi">
-                <button
-                  type="button"
-                  onClick={(event) => handleNavClick(event, "about")}
-                >
+                <button type="button" onClick={() => toggleVisibility(0)}>
                   Languages
                 </button>
+                {isParagraphVisible[0] && <p>Paragraph 1 content goes here.</p>}
               </li>
               <li className="skillsLi">
-                <button
-                  type="button"
-                  onClick={(event) => handleNavClick(event, "projects")}
-                >
+                <button type="button" onClick={() => toggleVisibility(1)}>
                   Technologies
                 </button>
+                {isParagraphVisible[1] && <p>Paragraph 2 content goes here.</p>}
               </li>
               <li className="skillsLi">
-                <button
-                  type="button"
-                  onClick={(event) => handleNavClick(event, "experience")}
-                >
+                <button type="button" onClick={() => toggleVisibility(2)}>
                   Philosophies
                 </button>
+                {isParagraphVisible[2] && <p>Paragraph 3 content goes here.</p>}
               </li>
             </ul>
           </div>
