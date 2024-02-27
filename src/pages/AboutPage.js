@@ -23,7 +23,8 @@ function AboutPage() {
     display: "flex",
     flexDirection: "column",
     justifyContent: "flex-start",
-    overflow: "scroll",
+    overflow: "auto",
+    scrollbarWidth: "none",
   };
 
   const descriptionStyle = {

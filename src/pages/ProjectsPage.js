@@ -19,8 +19,9 @@ function ProjectsPage() {
     flex: "0 0 80%",
     display: "flex",
     flexDirection: "row",
-    // justifyContent: "space-between",
-    overflow: "scroll",
+    justifyContent: "space-between",
+    overflow: "auto",
+    scrollbarWidth: "none",
     flexWrap: "wrap",
   };
 
@@ -43,14 +44,32 @@ function ProjectsPage() {
       <div style={bottomDivStyle}>
         <ProjectCard
           project={"placeholder"}
+          title={"ASL Interpreter"}
+          color={"#ffffff"}
+          height={"40vh"}
+          width={"41vw"}
+        />
+        <ProjectCard
+          project={"placeholder"}
           title={"TopTier"}
           color={"#ffffff"}
+          height={"40vh"}
+          width={"41vw"}
         />
-        <ProjectCard color={"#ffffff"} />
-        <ProjectCard color={"#ffffff"} />
-        <ProjectCard color={"#ffffff"} />
-        <ProjectCard color={"#ffffff"} />
-        <ProjectCard color={"#ffffff"} />
+        <ProjectCard
+          project={"placeholder"}
+          title={"PL0 Compiler"}
+          color={"#ffffff"}
+          height={"40vh"}
+          width={"41vw"}
+        />
+        <ProjectCard
+          project={"placeholder"}
+          title={"InfoVenture"}
+          color={"#ffffff"}
+          height={"40vh"}
+          width={"41vw"}
+        />
       </div>
     </div>
   );

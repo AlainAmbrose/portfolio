@@ -36,7 +36,8 @@ function ExperiencePage() {
     display: "flex",
     flexDirection: "column",
     justifyContent: "flex-start",
-    overflow: "scroll",
+    overflow: "auto",
+    scrollbarWidth: "none",
   };
 
   const skillsStyle = {
@@ -67,7 +68,15 @@ function ExperiencePage() {
                 <button type="button" onClick={() => toggleVisibility(0)}>
                   Languages
                 </button>
-                {isParagraphVisible[0] && <p>Paragraph 1 content goes here.</p>}
+                {isParagraphVisible[0] && (
+                  <ul className="info-list">
+                    <li>Data Structures and Algorithms </li>
+                    <li>Security in Computing</li>
+                    <li>Object Oriented Programming</li>
+                    <li>Algorithms for Machine Learning</li>
+                    <li>Software Engineering</li>
+                  </ul>
+                )}
               </li>
               <li className="skillsLi">
                 <button type="button" onClick={() => toggleVisibility(1)}>
