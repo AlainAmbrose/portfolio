@@ -45,6 +45,7 @@ function ExperiencePage() {
     display: "flex",
     flexDirection: "row",
     justifyContent: "left",
+    overflow: "scroll",
   };
 
   const experienceContentStyle = {
@@ -70,11 +71,12 @@ function ExperiencePage() {
                 </button>
                 {isParagraphVisible[0] && (
                   <ul className="info-list">
-                    <li>Data Structures and Algorithms </li>
-                    <li>Security in Computing</li>
-                    <li>Object Oriented Programming</li>
-                    <li>Algorithms for Machine Learning</li>
-                    <li>Software Engineering</li>
+                    <li>- Java</li>
+                    <li>- Python</li>
+                    <li>- C</li>
+                    <li>- Scala</li>
+                    <li>- Kubernetes</li>
+                    <li>- JavaScript</li>
                   </ul>
                 )}
               </li>
@@ -82,13 +84,27 @@ function ExperiencePage() {
                 <button type="button" onClick={() => toggleVisibility(1)}>
                   Technologies
                 </button>
-                {isParagraphVisible[1] && <p>Paragraph 2 content goes here.</p>}
+                {isParagraphVisible[1] && (
+                  <ul className="info-list">
+                    <li>- Kafka</li>
+                    <li>- Kubernetes</li>
+                    <li>- Git</li>
+                    <li>- BigQuery</li>
+                    <li>- GCP</li>
+                  </ul>
+                )}
               </li>
               <li className="skillsLi">
                 <button type="button" onClick={() => toggleVisibility(2)}>
                   Philosophies
                 </button>
-                {isParagraphVisible[2] && <p>Paragraph 3 content goes here.</p>}
+                {isParagraphVisible[2] && (
+                  <ul className="info-list">
+                    <li>- Scrum</li>
+                    <li>- Agile</li>
+                    <li>- Kanban</li>
+                  </ul>
+                )}
               </li>
             </ul>
           </div>
