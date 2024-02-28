@@ -1,8 +1,16 @@
 import "../App.css";
+import "../App.css";
 
 // projects will be objects that have a title, picture,
 // and description
-const ProjectCard = ({ project, height, width, color, title }) => {
+const ProjectCard = ({
+  project,
+  height,
+  width,
+  color,
+  title,
+  descriptionArray,
+}) => {
   const cardStyle = {
     height: height,
     width: width,
@@ -11,6 +19,7 @@ const ProjectCard = ({ project, height, width, color, title }) => {
     position: "relative",
     borderRadius: "10px",
     margin: "2vw",
+    overflow: "scroll",
   };
 
   const cardTitleStyle = {
@@ -26,6 +35,13 @@ const ProjectCard = ({ project, height, width, color, title }) => {
     <div style={cardStyle}>
       <div style={{ flex: "0 0 15%" }}>
         <h1 style={cardTitleStyle}>{title}</h1>
+        <ul className="project-description">
+          {descriptionArray.map((description, index) => (
+            <li style={{ color: "#0E2C04", marginTop: "50" }} key={index}>
+              {description}
+            </li>
+          ))}
+        </ul>
       </div>
     </div>
   );

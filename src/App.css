@@ -214,11 +214,21 @@ img:hover {
 } */
 
 /*dark*/
-header, h1, h2, img, p, li, button {
+header, h1, h2, img, p, button {
   margin: 0;
   color: #ffffff;
   transition: color .5s, opacity .5s;
   opacity: 1;
+}
+
+.navLi li {
+  margin-top: 2rem;
+  color: #ffffff;
+}
+
+.project-description {
+  font-size: 1.7vw;
+  margin-top: 2rem;
 }
 
 h1 {
@@ -230,7 +240,10 @@ h1 {
   list-style: none;
 }
 
+ul { padding:0 }
+
 .info-list li {
   font-size: 1.7vw;
-  margin-top: 2rem; 
+  margin-top: 1rem; 
+  color: #ffffff;
 }
