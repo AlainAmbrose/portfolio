@@ -35,9 +35,12 @@ const ProjectCard = ({
     <div style={cardStyle}>
       <div style={{ flex: "0 0 15%" }}>
         <h1 style={cardTitleStyle}>{title}</h1>
-        <ul className="project-description">
+        <ul
+          className="project-description"
+          style={{ position: "absolute", left: 20, top: 50 }}
+        >
           {descriptionArray.map((description, index) => (
-            <li style={{ color: "#0E2C04", marginTop: "50" }} key={index}>
+            <li style={{ color: "#0E2C04", marginBottom: "1rem" }} key={index}>
               {description}
             </li>
           ))}

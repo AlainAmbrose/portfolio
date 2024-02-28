@@ -5,6 +5,7 @@ import InstagramSVG from "../images/Instagram.svg";
 import ProjectCard from "../components/ProjectCard";
 import { ChevronLeftIcon } from "@heroicons/react/20/solid";
 import { useNavigate } from "react-router-dom";
+import Navbar from "../components/NavBar";
 
 function ProjectsPage() {
   const navigate = useNavigate();
@@ -12,7 +13,7 @@ function ProjectsPage() {
   const topDivStyle = {
     display: "flex",
     flexDirection: "row",
-    justifyContent: "space-between",
+    // justifyContent: "space-between",
   };
 
   const bottomDivStyle = {
@@ -58,10 +59,7 @@ function ProjectsPage() {
           style={{ height: "75px", width: "75px" }}
           onClick={() => navigate("/")}
         >
-          <ChevronLeftIcon
-            style={{ height: "75px", width: "75px" }}
-            aria-hidden="true"
-          />
+          <Navbar />
         </button>
       </div>
       <div style={bottomDivStyle}>
