@@ -13,7 +13,7 @@ function ProjectsPage() {
   const topDivStyle = {
     display: "flex",
     flexDirection: "row",
-    // justifyContent: "space-between",
+    justifyContent: "space-between",
   };
 
   const bottomDivStyle = {
@@ -55,12 +55,7 @@ function ProjectsPage() {
         <div style={{ flex: "0 0 15%" }}>
           <h1 style={{ fontSize: "5vw", fontWeight: "800" }}> PROJECTS </h1>
         </div>
-        <button
-          style={{ height: "75px", width: "75px" }}
-          onClick={() => navigate("/")}
-        >
-          <Navbar />
-        </button>
+        <Navbar />
       </div>
       <div style={bottomDivStyle}>
         <ProjectCard

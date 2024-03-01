@@ -5,6 +5,7 @@ import InstagramSVG from "../images/Instagram.svg";
 import GitHubWhite from "../images/GitHub-White.svg";
 import LinkedInWhite from "../images/LinkedIn-White.svg";
 import InstagramWhite from "../images/Instagram-White.svg";
+import Navbar from "../components/NavBar";
 import { ChevronLeftIcon } from "@heroicons/react/20/solid";
 import { useNavigate } from "react-router-dom";
 
