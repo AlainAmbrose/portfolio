@@ -17,7 +17,7 @@ function ProjectsPage() {
   };
 
   const bottomDivStyle = {
-    flex: "0 0 80%",
+    flex: "0 0 85%",
     display: "flex",
     flexDirection: "row",
     justifyContent: "space-between",
@@ -50,7 +50,10 @@ function ProjectsPage() {
   ];
 
   return (
-    <div className="backgroundBox" style={{ flexDirection: "Column" }}>
+    <div
+      className="backgroundBox"
+      style={{ flexDirection: "Column", paddingBottom: "0" }}
+    >
       <div style={topDivStyle}>
         <div style={{ flex: "0 0 15%" }}>
           <h1 style={{ fontSize: "5vw", fontWeight: "800" }}> PROJECTS </h1>
@@ -63,7 +66,7 @@ function ProjectsPage() {
           title={"ASL Interpreter"}
           color={"#ffffff"}
           height={"40vh"}
-          width={"41vw"}
+          width={"45vw"}
           descriptionArray={interpreterArray}
         />
         <ProjectCard
@@ -71,7 +74,7 @@ function ProjectsPage() {
           title={"TopTier"}
           color={"#ffffff"}
           height={"40vh"}
-          width={"41vw"}
+          width={"45vw"}
           descriptionArray={topTierArray}
         />
         <ProjectCard
@@ -79,7 +82,7 @@ function ProjectsPage() {
           title={"PL0 Compiler"}
           color={"#ffffff"}
           height={"40vh"}
-          width={"41vw"}
+          width={"45vw"}
           descriptionArray={pl0Array}
         />
         <ProjectCard
@@ -87,7 +90,7 @@ function ProjectsPage() {
           title={"InfoVenture"}
           color={"#ffffff"}
           height={"40vh"}
-          width={"41vw"}
+          width={"45vw"}
           descriptionArray={infoVentureArray}
         />
       </div>
