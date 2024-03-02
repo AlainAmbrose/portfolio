@@ -18,7 +18,7 @@ const ProjectCard = ({
     // display: "flex",
     position: "relative",
     borderRadius: "10px",
-    margin: "2vw",
+    marginBottom: "1vw",
     overflow: "scroll",
   };
 

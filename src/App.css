@@ -4,27 +4,6 @@
   font-family: 'JetBrains Mono', monospace;
 } */
 
-/* body {
-	background: linear-gradient(-45deg, #0E2C04, #26730a, #144104);
-	background-size: 400% 400%;
-	animation: gradient 15s ease infinite;
-	height: 100vh;
-  font-family: 'JetBrains Mono', monospace;
-  margin: 0;
-} */
-
-/* darkmode */
-/* body {
-	background: linear-gradient(-45deg, #000000, #4b5548, #000000);
-	background-size: 400% 400%;
-	animation: gradient 15s ease infinite;
-	height: 100vh;
-  font-family: 'JetBrains Mono', monospace;
-  margin: 0;
-} */
-/* look into css modules */
-
-/* lightmode */
 body {
 	background: linear-gradient(-45deg, #41583a00, #114502d7, #01460100);
 	background-size: 400% 400%;
@@ -33,16 +12,6 @@ body {
   font-family: 'JetBrains Mono', monospace;
   margin: 0;
 }
-
-/* purple? */
-/* body {
-	background: linear-gradient(-45deg, #5400e66b, #481074d7, #6647c48c);
-	background-size: 400% 400%;
-  overflow: hidden;
-	animation: gradient 15s ease infinite;
-  font-family: 'JetBrains Mono', monospace;
-  margin: 0;
-} */
 
 @keyframes gradient {
 	0% {
@@ -61,20 +30,6 @@ body {
   src: url('./fonts/ttf/JetBrainsMono-Regular.ttf') format('truetype');
 }
 
-/* lightmode */
-/* .backgroundBox {
-  margin: 2.5vh;
-  padding: 30px;
-  height: 95vh;
-  box-sizing: border-box;
-  border-radius: 10px;
-  background-color: #f0f0f0;
-  opacity: 0.5;
-  display: flex;
-  justify-content: space-between;
-} */
-
-/* darkmode */
 .backgroundBox {
   margin: 2.5vh;
   /* padding: 30px; */
