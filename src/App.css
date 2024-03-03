@@ -233,3 +233,27 @@ ul { padding:0; list-style: none;}
   color: #FFFFFF;
   opacity: 1;
 }
+
+/* new */
+
+/* Start state for entering */
+.fade-enter {
+  opacity: 0;
+}
+
+/* End state for entering */
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 1250ms ease-in;
+}
+
+/* Start state for exiting */
+.fade-exit {
+  opacity: 0;
+  /* transition: opacity 1250ms ease-in; */
+}
+
+/* End state for exiting */
+.fade-exit-active {
+  opacity: 0;
+}
