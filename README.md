@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project is a personal website designed to showcase your portfolio, resume, blog, and contact information. It aims to provide a professional online presence to highlight your skills, experiences, and projects.
+This project is a personal website designed to showcase my portfolio, resume, and contact information. It aims to provide a professional online presence to highlight my skills, experiences, and projects.
 
 ## Table of Contents
 
@@ -14,17 +14,16 @@ This project is a personal website designed to showcase your portfolio, resume, 
 ## Features
 
 - **Home Page**: An introductory page with a brief bio and professional summary.
-- **Portfolio**: A section to display your projects with descriptions, images, and links.
-- **Resume**: A page to showcase your resume, with downloadable PDF option.
+- **Portfolio**: A section that displays my projects with descriptions, images, and links.
 - **Blog**: A blog section to write and share articles. (COMING SOON)
-- **Contact**: A contact form for visitors to get in touch with you.
+- **Contact**: My contanct info linked within the site
 - **Responsive Design**: Optimized for viewing on various devices (desktops, tablets, smartphones).
 
 ## Installation
 
 1. Clone the repository:
    ```sh
-   git clone https://github.com/yourusername/personal-website.git
+   git clone https://github.com/AlainAmbrose/portfolio.git
    ```
 2. Navigate to the project directory:
    ```sh
