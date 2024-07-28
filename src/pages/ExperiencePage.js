@@ -10,6 +10,7 @@ import InstagramWhite from "../images/Instagram-White.svg";
 import SunWhite from "../images/Sun-White.svg";
 import MoonWhite from "../images/Moon-White.png";
 import React, { useState } from "react";
+import Navbar from "../components/NavBar";
 
 function ExperiencePage() {
   const [isParagraphVisible, setIsParagraphVisible] = useState([
@@ -41,7 +42,7 @@ function ExperiencePage() {
   };
 
   const skillsStyle = {
-    flex: "0 0 70%",
+    flex: "0 0 90%",
     display: "flex",
     flexDirection: "row",
     justifyContent: "left",
@@ -58,119 +59,124 @@ function ExperiencePage() {
 
   return (
     <div className="backgroundBox">
-      <div style={leftDivStyle}>
-        <div style={{ flex: "0 0 15%" }}>
-          <h1 style={{ fontSize: "5vw", fontWeight: "800" }}> EXPERIENCE </h1>
-        </div>
-        <div style={skillsStyle}>
-          <div style={{ flex: "0 0 70%" }}>
-            <ul className="skills">
-              <li className="skillsLi">
-                <button type="button" onClick={() => toggleVisibility(0)}>
-                  Languages
-                </button>
-                {isParagraphVisible[0] && (
-                  <ul className="info-list">
-                    <li>- Java</li>
-                    <li>- Python</li>
-                    <li>- C</li>
-                    <li>- Scala</li>
-                    <li>- Kubernetes</li>
-                    <li>- JavaScript</li>
-                  </ul>
-                )}
-              </li>
-              <li className="skillsLi">
-                <button type="button" onClick={() => toggleVisibility(1)}>
-                  Technologies
-                </button>
-                {isParagraphVisible[1] && (
-                  <ul className="info-list">
-                    <li>- Kafka</li>
-                    <li>- Kubernetes</li>
-                    <li>- Git</li>
-                    <li>- BigQuery</li>
-                    <li>- GCP</li>
-                  </ul>
-                )}
-              </li>
-              <li className="skillsLi">
-                <button type="button" onClick={() => toggleVisibility(2)}>
-                  Philosophies
-                </button>
-                {isParagraphVisible[2] && (
-                  <ul className="info-list">
-                    <li>- Scrum</li>
-                    <li>- Agile</li>
-                    <li>- Kanban</li>
-                  </ul>
-                )}
-              </li>
-            </ul>
+      <div className="pageHeader">
+        <h1 style={{ fontSize: "5vw", fontWeight: "800", flex: "0 0 30%" }}>
+          EXPERIENCE
+        </h1>
+        <Navbar />
+      </div>
+      <div className="innerBackground">
+        <div style={leftDivStyle}>
+          <div style={skillsStyle}>
+            <div style={{ flex: "0 0 70%" }}>
+              <ul className="skills">
+                <li className="skillsLi">
+                  <button type="button" onClick={() => toggleVisibility(0)}>
+                    Languages
+                  </button>
+                  {isParagraphVisible[0] && (
+                    <ul className="info-list">
+                      <li>- Java</li>
+                      <li>- Python</li>
+                      <li>- C</li>
+                      <li>- Scala</li>
+                      <li>- Kubernetes</li>
+                      <li>- JavaScript</li>
+                    </ul>
+                  )}
+                </li>
+                <li className="skillsLi">
+                  <button type="button" onClick={() => toggleVisibility(1)}>
+                    Technologies
+                  </button>
+                  {isParagraphVisible[1] && (
+                    <ul className="info-list">
+                      <li>- Kafka</li>
+                      <li>- Kubernetes</li>
+                      <li>- Git</li>
+                      <li>- BigQuery</li>
+                      <li>- GCP</li>
+                    </ul>
+                  )}
+                </li>
+                <li className="skillsLi">
+                  <button type="button" onClick={() => toggleVisibility(2)}>
+                    Philosophies
+                  </button>
+                  {isParagraphVisible[2] && (
+                    <ul className="info-list">
+                      <li>- Scrum</li>
+                      <li>- Agile</li>
+                      <li>- Kanban</li>
+                    </ul>
+                  )}
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div>
+            <a href="https://www.github.com/AlainAmbrose">
+              <img
+                src={GitHubWhite}
+                alt="GitHub Link"
+                style={{ marginRight: "10px", height: "50px", width: "50px" }}
+              />
+            </a>
+            <a href="https://www.linkedin.com/in/alain-ambrose">
+              <img
+                src={LinkedInWhite}
+                alt="LinkedIn Link"
+                style={{ marginRight: "10px", height: "50px", width: "50px" }}
+              />
+            </a>
+            <a href="https://www.instagram.com/alainambrose911/">
+              <img
+                src={InstagramWhite}
+                alt="Instagram Link"
+                style={{ marginRight: "10px", height: "50px", width: "50px" }}
+              />
+            </a>
           </div>
         </div>
-        <div>
-          <a href="https://www.github.com/AlainAmbrose">
-            <img
-              src={GitHubWhite}
-              alt="GitHub Link"
-              style={{ marginRight: "10px", height: "50px", width: "50px" }}
-            />
-          </a>
-          <a href="https://www.linkedin.com/in/alain-ambrose">
-            <img
-              src={LinkedInWhite}
-              alt="LinkedIn Link"
-              style={{ marginRight: "10px", height: "50px", width: "50px" }}
-            />
-          </a>
-          <a href="https://www.instagram.com/alainambrose911/">
-            <img
-              src={InstagramWhite}
-              alt="Instagram Link"
-              style={{ marginRight: "10px", height: "50px", width: "50px" }}
-            />
-          </a>
-        </div>
-      </div>
-      <div style={rightDivStyle}>
-        <div style={experienceContentStyle}>
-          <h1>Credit Karma</h1>
-          <section id="Credit-Karma">
-            <ul className="info-list">
-              <li>
-                Implemented novel push/email notifications supporting the mobile
-                check deposit feature to enhance the user experience for
-                600,000+ members during check rejection events via a Thrift +
-                Kafka pipeline{" "}
-              </li>
-              <li>
-                Created an ETL pipeline from our real-time event queue to
-                BigQuery to enhance analytics and BI processes around check
-                deposit events
-              </li>
-              <li>
-                Utilized an internal experimentation platform to design
-                statistically sound A-B testing for new notifications to
-                determine impact on deposit re-submission success rates
-              </li>
-            </ul>
-          </section>
-          <h1>NSBE UCF</h1>
-          <section id="NSBE">
-            <ul className="info-list">
-              <li>
-                Developing an app that will allow the UCF chapter of the
-                National Society of Black Engineers' members to stay updated on
-                meeting information, keep track of their application and chapter
-                status, and view convention information{" "}
-              </li>
-              <li>
-                Volunteer with the TORCH committee to bring engineering concepts
-                to the attention of underprivileged children
-              </li>
-            </ul>
-          </section>
+        <div style={rightDivStyle}>
+          <div style={experienceContentStyle}>
+            <h1>Credit Karma</h1>
+            <section id="Credit-Karma">
+              <ul className="info-list">
+                <li>
+                  Implemented novel push/email notifications supporting the
+                  mobile check deposit feature to enhance the user experience
+                  for 600,000+ members during check rejection events via a
+                  Thrift + Kafka pipeline{" "}
+                </li>
+                <li>
+                  Created an ETL pipeline from our real-time event queue to
+                  BigQuery to enhance analytics and BI processes around check
+                  deposit events
+                </li>
+                <li>
+                  Utilized an internal experimentation platform to design
+                  statistically sound A-B testing for new notifications to
+                  determine impact on deposit re-submission success rates
+                </li>
+              </ul>
+            </section>
+            <h1>NSBE UCF</h1>
+            <section id="NSBE">
+              <ul className="info-list">
+                <li>
+                  Developing an app that will allow the UCF chapter of the
+                  National Society of Black Engineers' members to stay updated
+                  on meeting information, keep track of their application and
+                  chapter status, and view convention information{" "}
+                </li>
+                <li>
+                  Volunteer with the TORCH committee to bring engineering
+                  concepts to the attention of underprivileged children
+                </li>
+              </ul>
+            </section>
+          </div>
         </div>
       </div>
     </div>

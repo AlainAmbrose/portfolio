@@ -41,7 +41,22 @@ body {
   opacity: 0.2;
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
   box-shadow: 10px 10px 10px rgb(10, 0, 0);
+}
+
+.innerBackground {
+  box-sizing: border-box;
+  height: 70vh;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.pageHeader {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
 }
 
 .typewrite {
@@ -232,28 +247,4 @@ ul { padding:0; list-style: none;}
 .nav-list li a:hover {
   color: #FFFFFF;
   opacity: 1;
-}
-
-/* new */
-
-/* Start state for entering */
-.fade-enter {
-  opacity: 0;
-}
-
-/* End state for entering */
-.fade-enter-active {
-  opacity: 1;
-  transition: opacity 1250ms ease-in;
-}
-
-/* Start state for exiting */
-.fade-exit {
-  opacity: 0;
-  /* transition: opacity 1250ms ease-in; */
-}
-
-/* End state for exiting */
-.fade-exit-active {
-  opacity: 0;
 }
