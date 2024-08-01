@@ -1,3 +1,4 @@
+import React, { useEffect, useRef, useState } from "react";
 import "../App.css";
 import GitHubSVG from "../images/GitHub.svg";
 import LinkedInSVG from "../images/LinkedIn.svg";
@@ -6,11 +7,72 @@ import GitHubWhite from "../images/GitHub-White.svg";
 import LinkedInWhite from "../images/LinkedIn-White.svg";
 import InstagramWhite from "../images/Instagram-White.svg";
 import Navbar from "../components/NavBar";
-import { ChevronLeftIcon } from "@heroicons/react/20/solid";
 import { useNavigate } from "react-router-dom";
 
 function AboutPage() {
   const navigate = useNavigate();
+  const scrollRef = useRef(null);
+  const [isScrolling, setIsScrolling] = useState(false);
+  const [scrollDirection, setScrollDirection] = useState("down");
+  const [timeoutId, setTimeoutId] = useState(null);
+
+  const resetScroll = () => {
+    if (timeoutId) clearTimeout(timeoutId);
+    setIsScrolling(false);
+    setTimeoutId(setTimeout(() => setIsScrolling(true), 1000));
+  };
+
+  useEffect(() => {
+    const handleUserInteraction = () => resetScroll();
+
+    window.addEventListener("mousemove", handleUserInteraction);
+    window.addEventListener("mousedown", handleUserInteraction);
+    window.addEventListener("scroll", handleUserInteraction);
+
+    return () => {
+      window.removeEventListener("mousemove", handleUserInteraction);
+      window.removeEventListener("mousedown", handleUserInteraction);
+      window.removeEventListener("scroll", handleUserInteraction);
+    };
+  }, [timeoutId]);
+
+  useEffect(() => {
+    let scrollInterval;
+    if (isScrolling) {
+      scrollInterval = setInterval(() => {
+        if (scrollRef.current) {
+          if (scrollDirection === "down") {
+            scrollRef.current.scrollTop += 1;
+            if (
+              scrollRef.current.scrollTop + scrollRef.current.clientHeight >=
+              scrollRef.current.scrollHeight
+            ) {
+              setTimeout(() => {
+                setScrollDirection("up");
+              }, 2000);
+            }
+          } else {
+            scrollRef.current.scrollTop -= 1;
+            if (scrollRef.current.scrollTop <= 0) {
+              setTimeout(() => {
+                setScrollDirection("down");
+              }, 2000);
+            }
+          }
+        }
+      }, 10);
+    } else if (scrollInterval) {
+      clearInterval(scrollInterval);
+    }
+
+    return () => {
+      if (scrollInterval) clearInterval(scrollInterval);
+    };
+  }, [isScrolling, scrollDirection]);
+
+  useEffect(() => {
+    resetScroll();
+  }, []);
 
   const leftDivStyle = {
     flex: "0 0 48%",
@@ -107,7 +169,7 @@ function AboutPage() {
             </a>
           </div>
         </div>
-        <div style={rightDivStyle}>
+        <div style={rightDivStyle} ref={scrollRef}>
           <div style={aboutContentStyle}>
             <h1>Coursework</h1>
             <section id="coursework">
@@ -133,7 +195,7 @@ function AboutPage() {
               <ul className="info-list">
                 <li>Music</li>
                 <li>Skateboarding</li>
-                <li>Competetive Programming</li>
+                <li>Competitive Programming</li>
                 <li>Rock Climbing </li>
               </ul>
             </section>
