@@ -33,7 +33,7 @@ function ExperiencePage() {
   const resetScroll = () => {
     if (timeoutId) clearTimeout(timeoutId);
     setIsScrolling(false);
-    setTimeoutId(setTimeout(() => setIsScrolling(true), 1000));
+    setTimeoutId(setTimeout(() => setIsScrolling(true), 5000));
   };
 
   useEffect(() => {
@@ -206,6 +206,33 @@ function ExperiencePage() {
             <h1>Credit Karma</h1>
             <section id="Credit-Karma">
               <ul className="info-list">
+                <li>
+                  <h3 style={{ margin: "0" }}>Software Engineering Intern</h3>
+                </li>
+                <li>
+                  <h4 style={{ margin: "0" }}>May 2024 - Aug 2024</h4>
+                </li>
+                <li>
+                  Created RPC endpoints allowing for suggested user prompts to
+                  be displayed to over 200m+ users providing them with relevant
+                  follow up prompts allowing them to continue engaging with the
+                  AI assistant.
+                </li>
+                <li>
+                  Decreased LLM response render latency by 15% by optimizing the
+                  backend call structure to more efficiently display resources.
+                </li>
+                <li>
+                  Incorporated novel integration tests into a CI/CD workflow
+                  using CircleCI ensuring that pre-existing RPC calls between
+                  several microservices function as expected.
+                </li>
+                <li>
+                  <h3 style={{ margin: "0" }}>Software Engineering Intern</h3>
+                </li>
+                <li>
+                  <h4 style={{ margin: "0" }}>May 2024 - Aug 2024</h4>
+                </li>
                 <li>
                   Implemented novel push/email notifications supporting the
                   mobile check deposit feature to enhance the user experience
