@@ -139,12 +139,12 @@ function ExperiencePage() {
                   </button>
                   {isParagraphVisible[0] && (
                     <ul className="info-list">
-                      <li>- Java</li>
-                      <li>- Python</li>
-                      <li>- C</li>
-                      <li>- Scala</li>
-                      <li>- Kubernetes</li>
-                      <li>- JavaScript</li>
+                      <li>Java</li>
+                      <li>Python</li>
+                      <li>C</li>
+                      <li>Scala</li>
+                      <li>Kubernetes</li>
+                      <li>JavaScript</li>
                     </ul>
                   )}
                 </li>
@@ -154,11 +154,11 @@ function ExperiencePage() {
                   </button>
                   {isParagraphVisible[1] && (
                     <ul className="info-list">
-                      <li>- Kafka</li>
-                      <li>- Kubernetes</li>
-                      <li>- Git</li>
-                      <li>- BigQuery</li>
-                      <li>- GCP</li>
+                      <li>Kafka</li>
+                      <li>Kubernetes</li>
+                      <li>Git</li>
+                      <li>BigQuery</li>
+                      <li>GCP</li>
                     </ul>
                   )}
                 </li>
@@ -168,9 +168,9 @@ function ExperiencePage() {
                   </button>
                   {isParagraphVisible[2] && (
                     <ul className="info-list">
-                      <li>- Scrum</li>
-                      <li>- Agile</li>
-                      <li>- Kanban</li>
+                      <li>Scrum</li>
+                      <li>Agile</li>
+                      <li>Kanban</li>
                     </ul>
                   )}
                 </li>
