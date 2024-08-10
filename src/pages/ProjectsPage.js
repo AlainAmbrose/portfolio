@@ -10,89 +10,42 @@ import Navbar from "../components/NavBar";
 function ProjectsPage() {
   const navigate = useNavigate();
 
-  const topDivStyle = {
-    display: "flex",
-    flexDirection: "row",
-    justifyContent: "space-between",
+  const projectContainerStyle = {
+    display: "grid",
+    fontSize: "0",
+    gridTemplateColumns: "repeat(3, 1fr)",
+    gridTemplateRows: "auto",
+    gridGap: "3vh",
+    justifyContent: "center",
+    alignItems: "center",
   };
 
-  const bottomDivStyle = {
-    flex: "0 0 85%",
-    display: "flex",
-    flexDirection: "row",
-    justifyContent: "space-between",
-    overflow: "auto",
-    scrollbarWidth: "none",
-    flexWrap: "wrap",
+  const innerBackground = {
+    boxSizing: "border-box",
+    height: "75vh",
+    borderRadius: "10px",
   };
-
-  const interpreterArray = [
-    "Developed a program that is able to detect hand signs and translate them into text with a team of 5.",
-    "Integrated an object detection algorithm using RoboFlow",
-    "Languages & Technologies: Python, OpenCV, Jupyter Notebooks",
-  ];
-  const topTierArray = [
-    "Developed a website that allows users to catalog and rank video-games.",
-    "Implemented logic that integrates a relational database of users and games in order to provide a seamless user experience.",
-    "Implemented JSON web tokenization and email authentication to increase application security.",
-    "Languages & Technologies: React, Node.js, MongoDB, JWT, Nodemailer",
-  ];
-  const pl0Array = [
-    "Designed a compiler for the PL-0 programming language in a team of 2.",
-    "Implemented logic in order to parse code for grammar and syntax checking",
-    "Developed an algorithm for the generation of assembly code from novel PL/0 code.",
-    "Languages & Technologies: C",
-  ];
-  const infoVentureArray = [
-    "Wrote a role-playing game designed to help supplement learning in underprivileged areas.",
-    "Prompted the user to complete tasks and provided new information with each task completed.",
-    "Languages & Technologies: C#, Unity, Visual Studio",
-  ];
 
   return (
     <div
       className="backgroundBox"
       style={{ flexDirection: "Column", paddingBottom: "0" }}
     >
-      <div style={topDivStyle}>
-        <div style={{ flex: "0 0 15%" }}>
-          <h1 style={{ fontSize: "5vw", fontWeight: "800" }}> PROJECTS </h1>
-        </div>
+      <div className="pageHeader">
+        <h1 style={{ fontSize: "5vw", fontWeight: "800", flex: "0 0 30%" }}>
+          PROJECTS
+        </h1>
         <Navbar />
       </div>
-      <div style={bottomDivStyle}>
-        <ProjectCard
-          project={"placeholder"}
-          title={"ASL Interpreter"}
-          color={"#ffffff"}
-          height={"40vh"}
-          width={"45vw"}
-          descriptionArray={interpreterArray}
-        />
-        <ProjectCard
-          project={"placeholder"}
-          title={"TopTier"}
-          color={"#ffffff"}
-          height={"40vh"}
-          width={"45vw"}
-          descriptionArray={topTierArray}
-        />
-        <ProjectCard
-          project={"placeholder"}
-          title={"PL0 Compiler"}
-          color={"#ffffff"}
-          height={"40vh"}
-          width={"45vw"}
-          descriptionArray={pl0Array}
-        />
-        <ProjectCard
-          project={"placeholder"}
-          title={"InfoVenture"}
-          color={"#ffffff"}
-          height={"40vh"}
-          width={"45vw"}
-          descriptionArray={infoVentureArray}
-        />
+      <div style={innerBackground}>
+        <div style={projectContainerStyle}>
+          <ProjectCard title="Top Tier" />
+          <ProjectCard title="InfoVenture" />
+          <ProjectCard title="Distributed Web App" />
+          <ProjectCard title="Hand Sign Interpreter" />
+          <ProjectCard title="PL-0 compiler" />
+          <ProjectCard title="Cue Clash!" />
+        </div>
       </div>
     </div>
   );
