@@ -39,12 +39,12 @@ function ProjectsPage() {
       </div>
       <div style={innerBackground}>
         <div style={projectContainerStyle}>
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
+          <ProjectCard title="Top Tier" />
+          <ProjectCard title="InfoVenture" />
+          <ProjectCard title="Distributed Web App" />
+          <ProjectCard title="Hand Sign Interpreter" />
+          <ProjectCard title="PL-0 compiler" />
+          <ProjectCard title="Cue Clash!" />
         </div>
       </div>
     </div>

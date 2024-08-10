@@ -248,3 +248,29 @@ ul { padding:0; list-style: none;}
   color: #FFFFFF;
   opacity: 1;
 }
+
+/*new*/
+.project-card {
+  height: 20vh;
+  max-width: 100%;
+  position: relative;
+  border-radius: 10px;
+  overflow: scroll;
+  background-color: #F6F6F6;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-card:hover {
+  transform: scale(1.05); /* Slightly increase the size */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add a larger shadow */
+}
+
+.project-card-title {
+  font-size: 2vw;
+  font-weight: 800;
+  color: #0E2C04;
+  text-align: center;
+}
