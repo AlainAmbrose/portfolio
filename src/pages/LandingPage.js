@@ -10,6 +10,7 @@ import SunWhite from "../images/Sun-White.svg";
 import MoonWhite from "../images/Moon-White.png";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
+import PageTitleWithImagePlaceholder from "../components/PageTitleWithImagePlaceholder";
 
 function LandingPage() {
   const navigate = useNavigate();
@@ -43,13 +44,7 @@ function LandingPage() {
     <div className="backgroundBox">
       <div className="innerBackground" style={{ flex: "0 0 100%" }}>
         <div style={leftDivStyle}>
-          <div style={{ flex: "0 0 10%" }}>
-            <img
-              src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=30&pause=1000&color=ffffff&random=false&width=250&height=50&lines=Hi%2C+I'm;Hola%2C+soy;%E4%BD%A0%E5%A5%BD%EF%BC%8C%E6%88%91%E6%98%AF+;Salut%2C+je+suis;%D0%9F%D1%80%D0%B8%D0%B2%D0%B5%D1%82%2C+%D1%8F"
-              alt="Typing SVG"
-            />
-            <h1> Alain Ambrose </h1>
-          </div>
+          <PageTitleWithImagePlaceholder />
           <div style={contactNavStyle}>
             <div>
               <a href="https://www.github.com/AlainAmbrose">
