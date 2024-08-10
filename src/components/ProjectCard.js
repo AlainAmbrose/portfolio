@@ -3,23 +3,14 @@ import "../App.css";
 
 // projects will be objects that have a title, picture,
 // and description
-const ProjectCard = ({
-  project,
-  height,
-  width,
-  color,
-  title,
-  descriptionArray,
-}) => {
+const ProjectCard = ({ title }) => {
   const cardStyle = {
-    height: height,
-    width: width,
-    backgroundColor: color,
-    // display: "flex",
+    height: "20vh",
+    maxWidth: "100%",
     position: "relative",
     borderRadius: "10px",
-    marginBottom: "1vw",
     overflow: "scroll",
+    backgroundColor: "#F6F6F6",
   };
 
   const cardTitleStyle = {
@@ -38,13 +29,7 @@ const ProjectCard = ({
         <ul
           className="project-description"
           style={{ position: "absolute", left: 20, top: 50 }}
-        >
-          {descriptionArray.map((description, index) => (
-            <li style={{ color: "#0E2C04", marginBottom: "1rem" }} key={index}>
-              {description}
-            </li>
-          ))}
-        </ul>
+        ></ul>
       </div>
     </div>
   );
