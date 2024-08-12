@@ -5,7 +5,8 @@
 } */
 
 body {
-	background: linear-gradient(-45deg, #41583a00, #114502d7, #01460100);
+	background: linear-gradient(-45deg, #002e1f9f, #003e29, #002e1f9f);
+  /* background: linear-gradient(-45deg, #2f5e21, #28511c, #2f5e21); */
 	background-size: 400% 400%;
   overflow: hidden;
 	animation: gradient 15s ease infinite;
@@ -191,6 +192,12 @@ header, h1, h2, img, p, button {
   opacity: 1;
 }
 
+h3 {
+  margin: 0;
+  font-size: 2vw;
+  color: #ffffff;
+}
+
 .navLi li {
   margin-top: 2rem;
   color: #ffffff;
@@ -320,11 +327,12 @@ ul { padding:0; list-style: none;}
 /* Close button styling */
 .popup-close-button {
   position: absolute;
-  top: 2vh;
-  right: 2vh;
+  top: 20px;
+  right: 30px;
   background: none;
   border: none;
   font-size: 3rem;
   cursor: pointer;
   padding: 0;
 }
+

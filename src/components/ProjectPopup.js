@@ -1,20 +1,29 @@
 import React from "react";
 import "../App.css";
 
-const ProjectPopup = ({ isOpen, onClose, title, stack, description }) => {
+const ProjectPopup = ({ isOpen, onClose, content }) => {
   return (
     <div className={`popup-overlay ${isOpen ? "open" : ""}`} onClick={onClose}>
       <div className="popup-content" onClick={(e) => e.stopPropagation()}>
-        <h1 className="popup-title">{title}</h1>
+        <h1 className="popup-title">{content.title}</h1>
         <button className="popup-close-button" onClick={onClose}>
           &times;
         </button>
-        <div className="popup-description">
-          <p>{description}</p>
+        <div>
+          <p className="project-description">{content.description}</p>
         </div>
         <h3>Stack</h3>
-        {stack.map((item) => (
-          <p>{item}</p>
+        {content.stack.map((item, index) => (
+          <p
+            key={index}
+            style={{
+              fontSize: "1.2vw",
+              fontWeight: "bold",
+              marginBottom: "1rem",
+            }}
+          >
+            {item}
+          </p>
         ))}
       </div>
     </div>
