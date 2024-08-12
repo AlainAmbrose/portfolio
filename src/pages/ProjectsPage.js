@@ -10,6 +10,42 @@ import Navbar from "../components/NavBar";
 function ProjectsPage() {
   const navigate = useNavigate();
 
+  const topTierContent = {
+    title: "Top Tier",
+    description: "This is a project description",
+    stack: ["React", "Node.js", "MongoDB"],
+  };
+
+  const infoVentureContent = {
+    title: "InfoVenture",
+    description: "This is a project description",
+    stack: ["C#", "Unity"],
+  };
+
+  const distributedWebAppContent = {
+    title: "C.R.U.D",
+    description: "This is a project description",
+    stack: ["Java", "Tomcat"],
+  };
+
+  const handSignInterpreterContent = {
+    title: "Hand Sign Interpreter",
+    description: "This is a project description",
+    stack: ["Python", "OpenCV"],
+  };
+
+  const pl0CompilerContent = {
+    title: "PL-0 compiler",
+    description: "This is a project description",
+    stack: ["C"],
+  };
+
+  const cueClashContent = {
+    title: "Cue Clash!",
+    description: "This is a project description",
+    stack: ["C#", "Unity"],
+  };
+
   const projectContainerStyle = {
     display: "grid",
     fontSize: "0",
@@ -39,12 +75,12 @@ function ProjectsPage() {
       </div>
       <div style={innerBackground}>
         <div style={projectContainerStyle}>
-          <ProjectCard title="Top Tier" />
-          <ProjectCard title="InfoVenture" />
-          <ProjectCard title="Distributed Web App" />
-          <ProjectCard title="Hand Sign Interpreter" />
-          <ProjectCard title="PL-0 compiler" />
-          <ProjectCard title="Cue Clash!" />
+          <ProjectCard content={topTierContent} />
+          <ProjectCard content={infoVentureContent} />
+          <ProjectCard content={distributedWebAppContent} />
+          <ProjectCard content={handSignInterpreterContent} />
+          <ProjectCard content={pl0CompilerContent} />
+          <ProjectCard content={cueClashContent} />
         </div>
       </div>
     </div>

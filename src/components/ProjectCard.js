@@ -5,7 +5,7 @@ import { useState } from "react";
 
 // projects will be objects that have a title, picture,
 // and description
-const ProjectCard = ({ title }) => {
+const ProjectCard = ({ content }) => {
   const [open, setOpen] = useState(false);
   return (
     <>
@@ -17,14 +17,14 @@ const ProjectCard = ({ title }) => {
         }}
       >
         <div style={{ flex: "0 0 70%" }}>
-          <h1 className="project-card-title">{title}</h1>
+          <h1 className="project-card-title">{content.title}</h1>
         </div>
       </div>
 
       <ProjectPopup
         isOpen={open}
         onClose={() => setOpen(false)}
-        description="This is a project description"
+        content={content}
       />
     </>
   );
