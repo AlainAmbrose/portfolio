@@ -1,5 +1,4 @@
 import "../App.css";
-import "../App.css";
 import ProjectPopup from "./ProjectPopup";
 import { useState } from "react";
 

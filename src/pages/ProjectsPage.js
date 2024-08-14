@@ -11,8 +11,9 @@ function ProjectsPage() {
   const navigate = useNavigate();
 
   const topTierContent = {
-    title: "Top Tier",
-    description: "This is a project description",
+    title: "TopTier",
+    description:
+      "TopTier is a web app that allows for cataloging and ranking video-games",
     stack: ["React", "Node.js", "MongoDB"],
   };
 

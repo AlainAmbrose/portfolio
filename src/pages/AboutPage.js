@@ -145,7 +145,7 @@ function AboutPage() {
               </p>
             </div>
           </div>
-          <div>
+          <div className="socialMediaLinks">
             <a href="https://www.github.com/AlainAmbrose">
               <img
                 src={GitHubWhite}

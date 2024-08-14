@@ -11,6 +11,7 @@ import SunWhite from "../images/Sun-White.svg";
 import MoonWhite from "../images/Moon-White.png";
 import React, { useState, useRef, useEffect } from "react";
 import Navbar from "../components/NavBar";
+import ExperienceCard from "../components/ExperienceCard";
 
 function ExperiencePage() {
   const [isParagraphVisible, setIsParagraphVisible] = useState([
@@ -25,69 +26,6 @@ function ExperiencePage() {
     setIsParagraphVisible(updatedVisibility);
   };
 
-  const scrollRef = useRef(null);
-  const [isScrolling, setIsScrolling] = useState(false);
-  const [scrollDirection, setScrollDirection] = useState("down");
-  const [timeoutId, setTimeoutId] = useState(null);
-
-  const resetScroll = () => {
-    if (timeoutId) clearTimeout(timeoutId);
-    setIsScrolling(false);
-    setTimeoutId(setTimeout(() => setIsScrolling(true), 5000));
-  };
-
-  useEffect(() => {
-    const handleUserInteraction = () => resetScroll();
-
-    window.addEventListener("mousemove", handleUserInteraction);
-    window.addEventListener("mousedown", handleUserInteraction);
-    window.addEventListener("scroll", handleUserInteraction);
-
-    return () => {
-      window.removeEventListener("mousemove", handleUserInteraction);
-      window.removeEventListener("mousedown", handleUserInteraction);
-      window.removeEventListener("scroll", handleUserInteraction);
-    };
-  }, [timeoutId]);
-
-  useEffect(() => {
-    let scrollInterval;
-    if (isScrolling) {
-      scrollInterval = setInterval(() => {
-        if (scrollRef.current) {
-          if (scrollDirection === "down") {
-            scrollRef.current.scrollTop += 1;
-            if (
-              scrollRef.current.scrollTop + scrollRef.current.clientHeight >=
-              scrollRef.current.scrollHeight
-            ) {
-              setTimeout(() => {
-                setScrollDirection("up");
-              }, 2000);
-            }
-          } else {
-            scrollRef.current.scrollTop -= 1;
-            if (scrollRef.current.scrollTop <= 0) {
-              setTimeout(() => {
-                setScrollDirection("down");
-              }, 2000);
-            }
-          }
-        }
-      }, 10);
-    } else if (scrollInterval) {
-      clearInterval(scrollInterval);
-    }
-
-    return () => {
-      if (scrollInterval) clearInterval(scrollInterval);
-    };
-  }, [isScrolling, scrollDirection]);
-
-  useEffect(() => {
-    resetScroll();
-  }, []);
-
   const leftDivStyle = {
     flex: "0 0 38%",
     display: "flex",
@@ -96,16 +34,16 @@ function ExperiencePage() {
   };
 
   const rightDivStyle = {
-    flex: "0 0 58%",
+    flex: "0 0 48%",
     display: "flex",
     flexDirection: "column",
-    justifyContent: "flex-start",
     overflow: "auto",
     scrollbarWidth: "none",
+    marginTop: "2vh",
   };
 
   const skillsStyle = {
-    flex: "0 0 90%",
+    flex: "0 0 80%",
     display: "flex",
     flexDirection: "row",
     justifyContent: "left",
@@ -120,16 +58,59 @@ function ExperiencePage() {
     marginRight: "25px",
   };
 
+  const creditKarmaContent1 = {
+    title: "Credit Karma",
+    link: "https://www.creditkarma.com/careers/university",
+    description: [
+      {
+        date: "May 2024 — Aug 2024",
+        title: "Software Engineering Intern",
+        bullets: [
+          "Created RPC endpoints allowing for suggested user prompts to be displayed to over 200m+ users providing them with relevant follow up prompts allowing them to continue engaging with the AI assistant.",
+          "Decreased LLM response render latency by 15% by optimizing the backend call structure to more efficiently display resources.",
+          "Incorporated novel integration tests into a CI/CD workflow using CircleCI ensuring that pre-existing RPC calls between several microservices function as expected.",
+        ],
+      },
+    ],
+  };
+
+  const creditKarmaContent2 = {
+    title: "Credit Karma",
+    link: "https://www.creditkarma.com/careers/university",
+    description: [
+      {
+        date: "May 2023 — Aug 2023",
+        title: "Software Engineering Intern",
+        bullets: [
+          "Implemented novel push/email notifications supporting the mobile check deposit feature to enhance the user experience for 600,000+ members during check rejection events via a Thrift + Kafka pipeline.",
+          "Created an ETL pipeline from our real-time event queue to BigQuery to enhance analytics and BI processes around check deposit events.",
+          "Utilized an internal experimentation platform to design statistically sound A-B testing for new notifications to determine impact on deposit re-submission success rates.",
+        ],
+      },
+    ],
+  };
+
+  const nsbeUCFContent = {
+    title: "NSBE UCF",
+    link: "https://www.nsbeucf.org",
+    description: [
+      {
+        date: "Aug 2023 — Present",
+        title: "Member",
+        bullets: [
+          "Developing an app that will allow the UCF chapter of the National Society of Black Engineers' members to stay updated on meeting information, keep track of their application and chapter status, and view convention information.",
+          "Volunteer with the TORCH committee to bring engineering concepts to the attention of underprivileged children.",
+        ],
+      },
+    ],
+  };
+
   return (
     <div className="backgroundBox">
-      <div className="pageHeader">
-        <h1 style={{ fontSize: "5vw", fontWeight: "800", flex: "0 0 30%" }}>
-          EXPERIENCE
-        </h1>
-        <Navbar />
-      </div>
+      <Navbar />
       <div className="innerBackground">
         <div style={leftDivStyle}>
+          <h1 style={{ fontSize: "5vw", fontWeight: "800" }}>EXPERIENCE</h1>
           <div style={skillsStyle}>
             <div style={{ flex: "0 0 70%" }}>
               <ul className="skills">
@@ -177,7 +158,7 @@ function ExperiencePage() {
               </ul>
             </div>
           </div>
-          <div>
+          <div className="socialMediaLinks">
             <a href="https://www.github.com/AlainAmbrose">
               <img
                 src={GitHubWhite}
@@ -201,72 +182,10 @@ function ExperiencePage() {
             </a>
           </div>
         </div>
-        <div style={rightDivStyle} ref={scrollRef}>
-          <div style={experienceContentStyle}>
-            <h1>Credit Karma</h1>
-            <section id="Credit-Karma">
-              <ul className="info-list">
-                <li>
-                  <h3 style={{ margin: "0" }}>Software Engineering Intern</h3>
-                </li>
-                <li>
-                  <h4 style={{ margin: "0" }}>May 2024 - Aug 2024</h4>
-                </li>
-                <li>
-                  Created RPC endpoints allowing for suggested user prompts to
-                  be displayed to over 200m+ users providing them with relevant
-                  follow up prompts allowing them to continue engaging with the
-                  AI assistant.
-                </li>
-                <li>
-                  Decreased LLM response render latency by 15% by optimizing the
-                  backend call structure to more efficiently display resources.
-                </li>
-                <li>
-                  Incorporated novel integration tests into a CI/CD workflow
-                  using CircleCI ensuring that pre-existing RPC calls between
-                  several microservices function as expected.
-                </li>
-                <li>
-                  <h3 style={{ margin: "0" }}>Software Engineering Intern</h3>
-                </li>
-                <li>
-                  <h4 style={{ margin: "0" }}>May 2024 - Aug 2024</h4>
-                </li>
-                <li>
-                  Implemented novel push/email notifications supporting the
-                  mobile check deposit feature to enhance the user experience
-                  for 600,000+ members during check rejection events via a
-                  Thrift + Kafka pipeline{" "}
-                </li>
-                <li>
-                  Created an ETL pipeline from our real-time event queue to
-                  BigQuery to enhance analytics and BI processes around check
-                  deposit events
-                </li>
-                <li>
-                  Utilized an internal experimentation platform to design
-                  statistically sound A-B testing for new notifications to
-                  determine impact on deposit re-submission success rates
-                </li>
-              </ul>
-            </section>
-            <h1>NSBE UCF</h1>
-            <section id="NSBE">
-              <ul className="info-list">
-                <li>
-                  Developing an app that will allow the UCF chapter of the
-                  National Society of Black Engineers' members to stay updated
-                  on meeting information, keep track of their application and
-                  chapter status, and view convention information{" "}
-                </li>
-                <li>
-                  Volunteer with the TORCH committee to bring engineering
-                  concepts to the attention of underprivileged children
-                </li>
-              </ul>
-            </section>
-          </div>
+        <div style={rightDivStyle}>
+          <ExperienceCard content={creditKarmaContent1} />
+          <ExperienceCard content={creditKarmaContent2} />
+          <ExperienceCard content={nsbeUCFContent} />
         </div>
       </div>
     </div>
