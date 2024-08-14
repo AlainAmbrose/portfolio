@@ -1,12 +1,7 @@
-/* body {
-  background-color: #0E2C04;
-  margin: 0;
-  font-family: 'JetBrains Mono', monospace;
-} */
-
 body {
 	background: linear-gradient(-45deg, #002e1f9f, #003e29, #002e1f9f);
-  /* background: linear-gradient(-45deg, #2f5e21, #28511c, #2f5e21); */
+  /*old*/
+  /* background: linear-gradient(-45deg, #41583a00, #114502d7, #01460100); */
 	background-size: 400% 400%;
   overflow: hidden;
 	animation: gradient 15s ease infinite;
@@ -52,6 +47,7 @@ body {
   border-radius: 10px;
   display: flex;
   justify-content: space-between;
+  flex: 0 0 100%;
 }
 
 .pageHeader {
@@ -119,6 +115,21 @@ body {
   text-shadow: 0px 2px 0px rgba(255,255,255,.5);
 }
 
+.navbarLi {
+  cursor: pointer;
+}
+
+.navbarLi button:hover {
+  color: #FFFFFF;
+  opacity: 1;
+}
+
+.navbarLi button {
+  color: transparent;
+  padding: 0;
+  text-shadow: 0px 2px 0px rgba(255,255,255,.5);
+}
+
 
 .skills {
   position: relative;
@@ -131,14 +142,6 @@ body {
   cursor: pointer;
   margin-bottom: 2rem;
 }
-
-/*lightmode*/
-/* .navLi button:hover {
-  color: #0E2C04;
-  opacity: .5;
-} */
-
-/*darkmode*/
 
 .skillsLi button:hover {
   color: #FFFFFF;
@@ -178,13 +181,6 @@ img:hover {
   opacity: .5;
 }
 
-/*light*/
-/* header, h1, h2, img, p, li, button {
-  margin: 0;
-  color: #0E2C04;
-} */
-
-/*dark*/
 header, h1, h2, img, p, button {
   margin: 0;
   color: #ffffff;
@@ -223,12 +219,6 @@ ul { padding:0; list-style: none;}
   font-size: 1.7vw;
   margin-top: 1rem; 
   color: #ffffff;
-}
-
-/*just added*/
-.navbar {
-  color: #fff;
-  padding: 10px 20px;
 }
 
 .nav-list {
@@ -336,3 +326,75 @@ ul { padding:0; list-style: none;}
   padding: 0;
 }
 
+/* Experince card styles */
+.experience-card {
+  height: fit-content;
+  max-width: 100%;
+  position: relative;
+  border-radius: 10px;
+  background-color: #f6f6f600;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  margin: 1vh;
+  padding: 2vh;
+  text-decoration: none;
+}
+
+.experience-card-header {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.experience-card:hover {
+  background-color: #f6f6f63d;
+  transition: background-color 0.2s ease-in;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+.experience-card-title {
+  font-weight: bold;
+  font-size: 2vw;
+  font-weight: 800;
+  color: #f6f6f6;
+  text-align: left;
+}
+
+.experience-card-text {
+  font-size: 1.5vw;
+  color: #ffffff;
+  margin-top: 2vh;
+}
+
+.experience-card-date {
+  font-size: 1vw;
+  color: #f6f6f6;
+}
+
+.experience-card-arrow {
+  font-size: 2vw;
+  color: #f6f6f6;
+}
+
+.navbar {
+  background-color: #091d02;
+  opacity: 0.99;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  padding: 1vh;
+  border-radius: 20px;
+  box-shadow: 10px 10px 10px rgb(10, 0, 0);
+  position: absolute;
+  top: 5vh;
+  right: 5vh;
+  z-index: 1000;
+}
+
+.socialMediaLinks {
+  position: absolute;
+  bottom: 5vh;
+  left: 5vh;
+}

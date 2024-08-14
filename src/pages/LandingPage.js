@@ -45,34 +45,34 @@ function LandingPage() {
       <div className="innerBackground" style={{ flex: "0 0 100%" }}>
         <div style={leftDivStyle}>
           <PageTitleWithImagePlaceholder />
-          <div style={contactNavStyle}>
+          <div className="socialMediaLinks">
             <div>
               <a href="https://www.github.com/AlainAmbrose">
                 <img
                   src={GitHubWhite}
                   alt="GitHub Link"
-                  style={{ marginRight: "10px", height: "50px", width: "50px" }}
+                  style={{ marginRight: "10px", height: "5vh", width: "5vh" }}
                 />
               </a>
               <a href="https://www.linkedin.com/in/alain-ambrose">
                 <img
                   src={LinkedInWhite}
                   alt="LinkedIn Link"
-                  style={{ marginRight: "10px", height: "50px", width: "50px" }}
+                  style={{ marginRight: "10px", height: "5vh", width: "5vh" }}
                 />
               </a>
               <a href="https://www.instagram.com/alainambrose911/">
                 <img
                   src={InstagramWhite}
                   alt="Instagram Link"
-                  style={{ marginRight: "10px", height: "50px", width: "50px" }}
+                  style={{ marginRight: "10px", height: "5vh", width: "5vh" }}
                 />
               </a>
             </div>
-            <div>
+            {/* <div>
               <p>Orlando, FL</p>
               <p>ambrosealain@gmail.com</p>
-            </div>
+            </div> */}
           </div>
         </div>
         <div style={rightDivStyle}>
