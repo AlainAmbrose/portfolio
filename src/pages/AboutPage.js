@@ -8,6 +8,7 @@ import LinkedInWhite from "../images/LinkedIn-White.svg";
 import InstagramWhite from "../images/Instagram-White.svg";
 import Navbar from "../components/NavBar";
 import { useNavigate } from "react-router-dom";
+import SocialMediaLinks from "../components/SocialMediaLinks";
 
 function AboutPage() {
   const navigate = useNavigate();
@@ -145,29 +146,7 @@ function AboutPage() {
               </p>
             </div>
           </div>
-          <div className="socialMediaLinks">
-            <a href="https://www.github.com/AlainAmbrose">
-              <img
-                src={GitHubWhite}
-                alt="GitHub Link"
-                style={{ marginRight: "10px", height: "50px", width: "50px" }}
-              />
-            </a>
-            <a href="https://www.linkedin.com/in/alain-ambrose">
-              <img
-                src={LinkedInWhite}
-                alt="LinkedIn Link"
-                style={{ marginRight: "10px", height: "50px", width: "50px" }}
-              />
-            </a>
-            <a href="https://www.instagram.com/alainambrose911/">
-              <img
-                src={InstagramWhite}
-                alt="Instagram Link"
-                style={{ marginRight: "10px", height: "50px", width: "50px" }}
-              />
-            </a>
-          </div>
+          <SocialMediaLinks />
         </div>
         <div style={rightDivStyle} ref={scrollRef}>
           <div style={aboutContentStyle}>
