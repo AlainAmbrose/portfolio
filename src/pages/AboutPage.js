@@ -20,7 +20,7 @@ function AboutPage() {
   const resetScroll = () => {
     if (timeoutId) clearTimeout(timeoutId);
     setIsScrolling(false);
-    setTimeoutId(setTimeout(() => setIsScrolling(true), 1000));
+    setTimeoutId(setTimeout(() => setIsScrolling(true), 5000));
   };
 
   useEffect(() => {
@@ -92,7 +92,7 @@ function AboutPage() {
   };
 
   const descriptionStyle = {
-    flex: "0 0 70%",
+    flex: "0 0 75%",
     display: "flex",
     flexDirection: "row",
     justifyContent: "left",
@@ -103,19 +103,14 @@ function AboutPage() {
     display: "flex",
     flexDirection: "column",
     textAlign: "right",
-    marginRight: "25px",
   };
 
   return (
     <div className="backgroundBox">
-      <div className="pageHeader">
-        <h1 style={{ fontSize: "5vw", fontWeight: "800", flex: "0 0 30%" }}>
-          ABOUT
-        </h1>
-        <Navbar />
-      </div>
+      <Navbar />
       <div className="innerBackground">
         <div style={leftDivStyle}>
+          <h1 style={{ fontSize: "5vw", fontWeight: "800" }}>ABOUT</h1>
           <div style={descriptionStyle}>
             <div style={{ flex: "0 0 85%" }}>
               <p
@@ -149,6 +144,7 @@ function AboutPage() {
           <SocialMediaLinks />
         </div>
         <div style={rightDivStyle} ref={scrollRef}>
+          <div style={{ flex: "0 0 8%" }}></div>
           <div style={aboutContentStyle}>
             <h1>Coursework</h1>
             <section id="coursework">

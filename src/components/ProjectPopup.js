@@ -9,7 +9,7 @@ const ProjectPopup = ({ isOpen, onClose, content }) => {
         <button className="popup-close-button" onClick={onClose}>
           &times;
         </button>
-        <div>
+        <div style={{ marginBottom: "3vh" }}>
           <p className="project-description">{content.description}</p>
         </div>
         <h3>Stack</h3>
