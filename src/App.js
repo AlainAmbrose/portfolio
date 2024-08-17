@@ -5,8 +5,33 @@ import SkillsPage from "./pages/SkillsPage.js";
 import ProjectsPage from "./pages/ProjectsPage.js";
 import ExperiencePage from "./pages/ExperiencePage.js";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { useEffect, useState } from "react";
 
-function App() {
+const App = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkIfMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    checkIfMobile();
+    window.addEventListener("resize", checkIfMobile);
+
+    return () => {
+      window.removeEventListener("resize", checkIfMobile);
+    };
+  }, []);
+
+  if (isMobile) {
+    return (
+      <div className="mobile-message">
+        <h1>Mobile Experience Not Supported Yet</h1>
+        <p>Please visit my website on a desktop or tablet device.</p>
+      </div>
+    );
+  }
+
   return (
     <Router>
       <Routes>
@@ -18,6 +43,6 @@ function App() {
       </Routes>
     </Router>
   );
-}
+};
 
 export default App;

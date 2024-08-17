@@ -1,7 +1,4 @@
 import "../App.css";
-import GitHubSVG from "../images/GitHub.svg";
-import LinkedInSVG from "../images/LinkedIn.svg";
-import InstagramSVG from "../images/Instagram.svg";
 import ProjectCard from "../components/ProjectCard";
 import { ChevronLeftIcon } from "@heroicons/react/20/solid";
 import { useNavigate } from "react-router-dom";
@@ -13,37 +10,42 @@ function ProjectsPage() {
   const topTierContent = {
     title: "TopTier",
     description:
-      "TopTier is a web app that allows for cataloging and ranking video-games",
+      "TopTier is an interactive platform designed for gaming enthusiasts to explore, catalog, rank, and review their favorite video games. The application allows users to create personal accounts, browse through a comprehensive list of video games, and contribute by adding their own ratings and reviews. The platform features JWT authentication, a RESTful API, and a MongoDB database.",
     stack: ["React", "Node.js", "MongoDB"],
   };
 
   const infoVentureContent = {
     title: "InfoVenture",
-    description: "This is a project description",
+    description:
+      "Infoventure is an educational game developed for ShellHacks, designed to empower students from underrepresented communities by teaching essential life lessons through interactive gameplay. The game is built on the Unity platform, leveraging its robust features to create an engaging and immersive experience.",
     stack: ["C#", "Unity"],
   };
 
   const distributedWebAppContent = {
     title: "C.R.U.D",
-    description: "This is a project description",
+    description:
+      "C.R.U.D allows users to read existing records, update information, and delete records related to Olympic events and NASCAR races.  Built as a distributed web application, C.R.U.D utilizes Java Servlets and the Tomcat server to handle client requests and manage data across multiple layers. The frontend of the application was developed using HTML and CSS, providing a clean and user-friendly interface. ",
     stack: ["Java", "Tomcat"],
   };
 
   const handSignInterpreterContent = {
-    title: "Hand Sign Interpreter",
-    description: "This is a project description",
+    title: "ASL Interpreter",
+    description:
+      "The American Sign Language (ASL) Letter Interpreter is a Python-based application designed to recognize and interpret hand signs representing letters of the American Sign Language alphabet. The application captures real-time input and outputs the corresponding letter to the terminal, making it a useful tool for learning and practicing ASL.",
     stack: ["Python", "OpenCV"],
   };
 
   const pl0CompilerContent = {
     title: "PL-0 compiler",
-    description: "This is a project description",
+    description:
+      "This is a The PL/0 Compiler is a project developed entirely in C, designed to parse, analyze, and compile code written in a novel version of the PL/0 programming language. This compiler not only checks the grammar and syntax of the PL/0 code but also generates corresponding assembly code.",
     stack: ["C"],
   };
 
   const cueClashContent = {
     title: "Cue Clash!",
-    description: "This is a project description",
+    description:
+      "Cue Clash! is an interactive web-based 8-ball pool game developed entirely in JavaScript. The game offers players a realistic and engaging online pool experience, complete with smooth animations and responsive gameplay.",
     stack: ["C#", "Unity"],
   };
 

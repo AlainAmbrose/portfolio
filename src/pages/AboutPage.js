@@ -8,6 +8,7 @@ import LinkedInWhite from "../images/LinkedIn-White.svg";
 import InstagramWhite from "../images/Instagram-White.svg";
 import Navbar from "../components/NavBar";
 import { useNavigate } from "react-router-dom";
+import SocialMediaLinks from "../components/SocialMediaLinks";
 
 function AboutPage() {
   const navigate = useNavigate();
@@ -19,7 +20,7 @@ function AboutPage() {
   const resetScroll = () => {
     if (timeoutId) clearTimeout(timeoutId);
     setIsScrolling(false);
-    setTimeoutId(setTimeout(() => setIsScrolling(true), 1000));
+    setTimeoutId(setTimeout(() => setIsScrolling(true), 5000));
   };
 
   useEffect(() => {
@@ -91,7 +92,7 @@ function AboutPage() {
   };
 
   const descriptionStyle = {
-    flex: "0 0 70%",
+    flex: "0 0 75%",
     display: "flex",
     flexDirection: "row",
     justifyContent: "left",
@@ -102,19 +103,14 @@ function AboutPage() {
     display: "flex",
     flexDirection: "column",
     textAlign: "right",
-    marginRight: "25px",
   };
 
   return (
     <div className="backgroundBox">
-      <div className="pageHeader">
-        <h1 style={{ fontSize: "5vw", fontWeight: "800", flex: "0 0 30%" }}>
-          ABOUT
-        </h1>
-        <Navbar />
-      </div>
+      <Navbar />
       <div className="innerBackground">
         <div style={leftDivStyle}>
+          <h1 style={{ fontSize: "5vw", fontWeight: "800" }}>ABOUT</h1>
           <div style={descriptionStyle}>
             <div style={{ flex: "0 0 85%" }}>
               <p
@@ -145,31 +141,10 @@ function AboutPage() {
               </p>
             </div>
           </div>
-          <div className="socialMediaLinks">
-            <a href="https://www.github.com/AlainAmbrose">
-              <img
-                src={GitHubWhite}
-                alt="GitHub Link"
-                style={{ marginRight: "10px", height: "50px", width: "50px" }}
-              />
-            </a>
-            <a href="https://www.linkedin.com/in/alain-ambrose">
-              <img
-                src={LinkedInWhite}
-                alt="LinkedIn Link"
-                style={{ marginRight: "10px", height: "50px", width: "50px" }}
-              />
-            </a>
-            <a href="https://www.instagram.com/alainambrose911/">
-              <img
-                src={InstagramWhite}
-                alt="Instagram Link"
-                style={{ marginRight: "10px", height: "50px", width: "50px" }}
-              />
-            </a>
-          </div>
+          <SocialMediaLinks />
         </div>
         <div style={rightDivStyle} ref={scrollRef}>
+          <div style={{ flex: "0 0 8%" }}></div>
           <div style={aboutContentStyle}>
             <h1>Coursework</h1>
             <section id="coursework">

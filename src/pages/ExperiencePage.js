@@ -1,17 +1,9 @@
 import "../App.css";
-import GitHubSVG from "../images/GitHub.svg";
-import LinkedInSVG from "../images/LinkedIn.svg";
-import InstagramSVG from "../images/Instagram.svg";
 import "../App.css";
-import SunGreen from "../images/Sun-Green.svg";
-import GitHubWhite from "../images/GitHub-White.svg";
-import LinkedInWhite from "../images/LinkedIn-White.svg";
-import InstagramWhite from "../images/Instagram-White.svg";
-import SunWhite from "../images/Sun-White.svg";
-import MoonWhite from "../images/Moon-White.png";
 import React, { useState, useRef, useEffect } from "react";
 import Navbar from "../components/NavBar";
 import ExperienceCard from "../components/ExperienceCard";
+import SocialMediaLinks from "../components/SocialMediaLinks";
 
 function ExperiencePage() {
   const [isParagraphVisible, setIsParagraphVisible] = useState([
@@ -48,6 +40,7 @@ function ExperiencePage() {
     flexDirection: "row",
     justifyContent: "left",
     overflow: "scroll",
+    marginTop: "2vh",
   };
 
   const experienceContentStyle = {
@@ -60,11 +53,11 @@ function ExperiencePage() {
 
   const creditKarmaContent1 = {
     title: "Credit Karma",
-    link: "https://www.creditkarma.com/careers/university",
+    link: "https://www.intuit.com/intuitassist/",
     description: [
       {
         date: "May 2024 — Aug 2024",
-        title: "Software Engineering Intern",
+        title: "Software Engineering Intern (Gen AI)",
         bullets: [
           "Created RPC endpoints allowing for suggested user prompts to be displayed to over 200m+ users providing them with relevant follow up prompts allowing them to continue engaging with the AI assistant.",
           "Decreased LLM response render latency by 15% by optimizing the backend call structure to more efficiently display resources.",
@@ -76,11 +69,11 @@ function ExperiencePage() {
 
   const creditKarmaContent2 = {
     title: "Credit Karma",
-    link: "https://www.creditkarma.com/careers/university",
+    link: "https://www.creditkarma.com/ck-money/savings",
     description: [
       {
         date: "May 2023 — Aug 2023",
-        title: "Software Engineering Intern",
+        title: "Software Engineering Intern (CK Money)",
         bullets: [
           "Implemented novel push/email notifications supporting the mobile check deposit feature to enhance the user experience for 600,000+ members during check rejection events via a Thrift + Kafka pipeline.",
           "Created an ETL pipeline from our real-time event queue to BigQuery to enhance analytics and BI processes around check deposit events.",
@@ -96,10 +89,10 @@ function ExperiencePage() {
     description: [
       {
         date: "Aug 2023 — Present",
-        title: "Member",
+        title: "Developer",
         bullets: [
           "Developing an app that will allow the UCF chapter of the National Society of Black Engineers' members to stay updated on meeting information, keep track of their application and chapter status, and view convention information.",
-          "Volunteer with the TORCH committee to bring engineering concepts to the attention of underprivileged children.",
+          "Volunteering with the TORCH committee to bring engineering concepts to the attention of underprivileged children.",
         ],
       },
     ],
@@ -124,8 +117,8 @@ function ExperiencePage() {
                       <li>Python</li>
                       <li>C</li>
                       <li>Scala</li>
-                      <li>Kubernetes</li>
                       <li>JavaScript</li>
+                      <li>TypeScript</li>
                     </ul>
                   )}
                 </li>
@@ -135,15 +128,18 @@ function ExperiencePage() {
                   </button>
                   {isParagraphVisible[1] && (
                     <ul className="info-list">
-                      <li>Kafka</li>
-                      <li>Kubernetes</li>
                       <li>Git</li>
+                      <li>Kafka</li>
+                      <li>Thrift</li>
                       <li>BigQuery</li>
-                      <li>GCP</li>
+                      <li>CircleCI</li>
+                      <li>React</li>
+                      <li>Node.js</li>
+                      <li>MongoDB</li>
                     </ul>
                   )}
                 </li>
-                <li className="skillsLi">
+                {/* <li className="skillsLi">
                   <button type="button" onClick={() => toggleVisibility(2)}>
                     Philosophies
                   </button>
@@ -154,33 +150,11 @@ function ExperiencePage() {
                       <li>Kanban</li>
                     </ul>
                   )}
-                </li>
+                </li> */}
               </ul>
             </div>
           </div>
-          <div className="socialMediaLinks">
-            <a href="https://www.github.com/AlainAmbrose">
-              <img
-                src={GitHubWhite}
-                alt="GitHub Link"
-                style={{ marginRight: "10px", height: "50px", width: "50px" }}
-              />
-            </a>
-            <a href="https://www.linkedin.com/in/alain-ambrose">
-              <img
-                src={LinkedInWhite}
-                alt="LinkedIn Link"
-                style={{ marginRight: "10px", height: "50px", width: "50px" }}
-              />
-            </a>
-            <a href="https://www.instagram.com/alainambrose911/">
-              <img
-                src={InstagramWhite}
-                alt="Instagram Link"
-                style={{ marginRight: "10px", height: "50px", width: "50px" }}
-              />
-            </a>
-          </div>
+          <SocialMediaLinks />
         </div>
         <div style={rightDivStyle}>
           <ExperienceCard content={creditKarmaContent1} />

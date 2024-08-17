@@ -11,6 +11,7 @@ import MoonWhite from "../images/Moon-White.png";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import PageTitleWithImagePlaceholder from "../components/PageTitleWithImagePlaceholder";
+import SocialMediaLinks from "../components/SocialMediaLinks";
 
 function LandingPage() {
   const navigate = useNavigate();
@@ -45,35 +46,11 @@ function LandingPage() {
       <div className="innerBackground" style={{ flex: "0 0 100%" }}>
         <div style={leftDivStyle}>
           <PageTitleWithImagePlaceholder />
-          <div className="socialMediaLinks">
-            <div>
-              <a href="https://www.github.com/AlainAmbrose">
-                <img
-                  src={GitHubWhite}
-                  alt="GitHub Link"
-                  style={{ marginRight: "10px", height: "5vh", width: "5vh" }}
-                />
-              </a>
-              <a href="https://www.linkedin.com/in/alain-ambrose">
-                <img
-                  src={LinkedInWhite}
-                  alt="LinkedIn Link"
-                  style={{ marginRight: "10px", height: "5vh", width: "5vh" }}
-                />
-              </a>
-              <a href="https://www.instagram.com/alainambrose911/">
-                <img
-                  src={InstagramWhite}
-                  alt="Instagram Link"
-                  style={{ marginRight: "10px", height: "5vh", width: "5vh" }}
-                />
-              </a>
-            </div>
-            {/* <div>
+          <SocialMediaLinks />
+          {/* <div>
               <p>Orlando, FL</p>
               <p>ambrosealain@gmail.com</p>
             </div> */}
-          </div>
         </div>
         <div style={rightDivStyle}>
           <div style={{ flex: "0 0 10%" }}></div>
@@ -87,14 +64,6 @@ function LandingPage() {
                   About
                 </button>
               </li>
-              {/* <li className="navLi">
-                    <button
-                      type="button"
-                      onClick={(event) => handleNavClick(event, "skills")}
-                    >
-                      Skills
-                    </button>
-                  </li> */}
               <li className="navLi">
                 <button
                   type="button"
