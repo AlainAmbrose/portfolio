@@ -1,17 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
 import "../App.css";
-import GitHubSVG from "../images/GitHub.svg";
-import LinkedInSVG from "../images/LinkedIn.svg";
-import InstagramSVG from "../images/Instagram.svg";
-import GitHubWhite from "../images/GitHub-White.svg";
-import LinkedInWhite from "../images/LinkedIn-White.svg";
-import InstagramWhite from "../images/Instagram-White.svg";
 import Navbar from "../components/NavBar";
-import { useNavigate } from "react-router-dom";
 import SocialMediaLinks from "../components/SocialMediaLinks";
 
 function AboutPage() {
-  const navigate = useNavigate();
   const scrollRef = useRef(null);
   const [isScrolling, setIsScrolling] = useState(false);
   const [scrollDirection, setScrollDirection] = useState("down");
