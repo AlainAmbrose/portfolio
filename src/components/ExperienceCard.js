@@ -1,11 +1,14 @@
 import "../App.css";
-import { useState } from "react";
 
 const ExperienceCard = ({ content }) => {
-  const [open, setOpen] = useState(false);
   return (
     <>
-      <a className="experience-card" href={content.link} target="_blank">
+      <a
+        className="experience-card"
+        href={content.link}
+        target="_blank"
+        rel="noreferrer"
+      >
         <div className="experience-card-header">
           <div style={{ flex: "0 0 50%" }}>
             <h1 className="experience-card-title">{content.title}</h1>

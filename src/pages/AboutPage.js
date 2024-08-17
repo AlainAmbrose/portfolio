@@ -1,27 +1,20 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState, useCallback } from "react";
 import "../App.css";
-import GitHubSVG from "../images/GitHub.svg";
-import LinkedInSVG from "../images/LinkedIn.svg";
-import InstagramSVG from "../images/Instagram.svg";
-import GitHubWhite from "../images/GitHub-White.svg";
-import LinkedInWhite from "../images/LinkedIn-White.svg";
-import InstagramWhite from "../images/Instagram-White.svg";
 import Navbar from "../components/NavBar";
-import { useNavigate } from "react-router-dom";
 import SocialMediaLinks from "../components/SocialMediaLinks";
 
 function AboutPage() {
-  const navigate = useNavigate();
   const scrollRef = useRef(null);
   const [isScrolling, setIsScrolling] = useState(false);
   const [scrollDirection, setScrollDirection] = useState("down");
-  const [timeoutId, setTimeoutId] = useState(null);
+  const timeoutRef = useRef(null);
 
-  const resetScroll = () => {
-    if (timeoutId) clearTimeout(timeoutId);
+  // Memoize the resetScroll function
+  const resetScroll = useCallback(() => {
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
     setIsScrolling(false);
-    setTimeoutId(setTimeout(() => setIsScrolling(true), 5000));
-  };
+    timeoutRef.current = setTimeout(() => setIsScrolling(true), 5000);
+  }, []);
 
   useEffect(() => {
     const handleUserInteraction = () => resetScroll();
@@ -34,13 +27,13 @@ function AboutPage() {
       window.removeEventListener("mousemove", handleUserInteraction);
       window.removeEventListener("mousedown", handleUserInteraction);
       window.removeEventListener("scroll", handleUserInteraction);
+      if (timeoutRef.current) clearTimeout(timeoutRef.current);
     };
-  }, [timeoutId]);
+  }, [resetScroll]);
 
   useEffect(() => {
-    let scrollInterval;
     if (isScrolling) {
-      scrollInterval = setInterval(() => {
+      const scrollInterval = setInterval(() => {
         if (scrollRef.current) {
           if (scrollDirection === "down") {
             scrollRef.current.scrollTop += 1;
@@ -48,32 +41,24 @@ function AboutPage() {
               scrollRef.current.scrollTop + scrollRef.current.clientHeight >=
               scrollRef.current.scrollHeight
             ) {
-              setTimeout(() => {
-                setScrollDirection("up");
-              }, 2000);
+              setScrollDirection("up");
             }
           } else {
             scrollRef.current.scrollTop -= 1;
             if (scrollRef.current.scrollTop <= 0) {
-              setTimeout(() => {
-                setScrollDirection("down");
-              }, 2000);
+              setScrollDirection("down");
             }
           }
         }
       }, 10);
-    } else if (scrollInterval) {
-      clearInterval(scrollInterval);
-    }
 
-    return () => {
-      if (scrollInterval) clearInterval(scrollInterval);
-    };
+      return () => clearInterval(scrollInterval);
+    }
   }, [isScrolling, scrollDirection]);
 
   useEffect(() => {
     resetScroll();
-  }, []);
+  }, [resetScroll]);
 
   const leftDivStyle = {
     flex: "0 0 48%",
