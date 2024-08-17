@@ -1,15 +1,5 @@
 import "../App.css";
-import GitHubSVG from "../images/GitHub.svg";
-import LinkedInSVG from "../images/LinkedIn.svg";
-import InstagramSVG from "../images/Instagram.svg";
-import SunGreen from "../images/Sun-Green.svg";
-import GitHubWhite from "../images/GitHub-White.svg";
-import LinkedInWhite from "../images/LinkedIn-White.svg";
-import InstagramWhite from "../images/Instagram-White.svg";
-import SunWhite from "../images/Sun-White.svg";
-import MoonWhite from "../images/Moon-White.png";
 import { useNavigate } from "react-router-dom";
-import { useEffect } from "react";
 import PageTitleWithImagePlaceholder from "../components/PageTitleWithImagePlaceholder";
 import SocialMediaLinks from "../components/SocialMediaLinks";
 
@@ -33,12 +23,6 @@ function LandingPage() {
     display: "flex",
     flexDirection: "column",
     justifyContent: "space-between",
-  };
-
-  const contactNavStyle = {
-    display: "flex",
-    flexDirection: "row",
-    justifyContent: "flex-start",
   };
 
   return (

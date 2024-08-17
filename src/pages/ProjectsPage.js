@@ -1,11 +1,8 @@
 import "../App.css";
 import ProjectCard from "../components/ProjectCard";
-import { useNavigate } from "react-router-dom";
 import Navbar from "../components/NavBar";
 
 function ProjectsPage() {
-  const navigate = useNavigate();
-
   const topTierContent = {
     title: "TopTier",
     description:

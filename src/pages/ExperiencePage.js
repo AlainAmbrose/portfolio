@@ -1,6 +1,6 @@
 import "../App.css";
 import "../App.css";
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState } from "react";
 import Navbar from "../components/NavBar";
 import ExperienceCard from "../components/ExperienceCard";
 import SocialMediaLinks from "../components/SocialMediaLinks";
@@ -41,14 +41,6 @@ function ExperiencePage() {
     justifyContent: "left",
     overflow: "scroll",
     marginTop: "2vh",
-  };
-
-  const experienceContentStyle = {
-    flex: "0 0 70%",
-    display: "flex",
-    flexDirection: "column",
-    textAlign: "right",
-    marginRight: "25px",
   };
 
   const creditKarmaContent1 = {
