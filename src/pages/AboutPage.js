@@ -1,4 +1,3 @@
-import React, { useEffect, useRef, useState, useCallback } from "react";
 import "../App.css";
 import Navbar from "../components/NavBar";
 import SocialMediaLinks from "../components/SocialMediaLinks";
