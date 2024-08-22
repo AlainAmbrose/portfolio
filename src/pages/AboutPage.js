@@ -4,62 +4,6 @@ import Navbar from "../components/NavBar";
 import SocialMediaLinks from "../components/SocialMediaLinks";
 
 function AboutPage() {
-  const scrollRef = useRef(null);
-  const [isScrolling, setIsScrolling] = useState(false);
-  const [scrollDirection, setScrollDirection] = useState("down");
-  const timeoutRef = useRef(null);
-
-  // Memoize the resetScroll function
-  const resetScroll = useCallback(() => {
-    if (timeoutRef.current) clearTimeout(timeoutRef.current);
-    setIsScrolling(false);
-    timeoutRef.current = setTimeout(() => setIsScrolling(true), 5000);
-  }, []);
-
-  useEffect(() => {
-    const handleUserInteraction = () => resetScroll();
-
-    window.addEventListener("mousemove", handleUserInteraction);
-    window.addEventListener("mousedown", handleUserInteraction);
-    window.addEventListener("scroll", handleUserInteraction);
-
-    return () => {
-      window.removeEventListener("mousemove", handleUserInteraction);
-      window.removeEventListener("mousedown", handleUserInteraction);
-      window.removeEventListener("scroll", handleUserInteraction);
-      if (timeoutRef.current) clearTimeout(timeoutRef.current);
-    };
-  }, [resetScroll]);
-
-  useEffect(() => {
-    if (isScrolling) {
-      const scrollInterval = setInterval(() => {
-        if (scrollRef.current) {
-          if (scrollDirection === "down") {
-            scrollRef.current.scrollTop += 1;
-            if (
-              scrollRef.current.scrollTop + scrollRef.current.clientHeight >=
-              scrollRef.current.scrollHeight
-            ) {
-              setScrollDirection("up");
-            }
-          } else {
-            scrollRef.current.scrollTop -= 1;
-            if (scrollRef.current.scrollTop <= 0) {
-              setScrollDirection("down");
-            }
-          }
-        }
-      }, 10);
-
-      return () => clearInterval(scrollInterval);
-    }
-  }, [isScrolling, scrollDirection]);
-
-  useEffect(() => {
-    resetScroll();
-  }, [resetScroll]);
-
   const leftDivStyle = {
     flex: "0 0 48%",
     display: "flex",
@@ -128,7 +72,7 @@ function AboutPage() {
           </div>
           <SocialMediaLinks />
         </div>
-        <div style={rightDivStyle} ref={scrollRef}>
+        <div style={rightDivStyle}>
           <div style={{ flex: "0 0 8%" }}></div>
           <div style={aboutContentStyle}>
             <h1>Coursework</h1>

@@ -253,7 +253,6 @@ ul { padding:0; list-style: none;}
   max-width: 100%;
   position: relative;
   border-radius: 10px;
-  overflow: scroll;
   /* background-color: #a8e9ab94; */
   background-color: #a8e9ab2c;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
