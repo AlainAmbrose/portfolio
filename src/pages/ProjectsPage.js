@@ -6,14 +6,14 @@ function ProjectsPage() {
   const topTierContent = {
     title: "TopTier",
     description:
-      "TopTier is an interactive platform designed for gaming enthusiasts to explore, catalog, rank, and review their favorite video games. The application allows users to create personal accounts, browse through a comprehensive list of video games, and contribute by adding their own ratings and reviews. The platform features JWT authentication, a RESTful API, and a MongoDB database.",
+      "TopTier is an interactive platform designed for gaming enthusiasts to explore, catalog, rank, and review their favorite video games. The application allows users to create personal accounts, browse through a comprehensive list of video games, and contribute by adding their own ratings and reviews. The platform features JWT authentication, RESTful API's, and a MongoDB database.",
     stack: ["React", "Node.js", "MongoDB"],
   };
 
   const infoVentureContent = {
     title: "InfoVenture",
     description:
-      "Infoventure is an educational game developed for ShellHacks, designed to empower students from underrepresented communities by teaching essential life lessons through interactive gameplay. The game is built on the Unity platform, leveraging its robust features to create an engaging and immersive experience.",
+      "Infoventure is an educational game developed for ShellHacks, designed to empower students from underrepresented communities by teaching essential life lessons through interactive gameplay. The game leverages the Unity platform to create an engaging and immersive experience.",
     stack: ["C#", "Unity"],
   };
 
@@ -28,13 +28,13 @@ function ProjectsPage() {
     title: "ASL Interpreter",
     description:
       "The American Sign Language (ASL) Letter Interpreter is a Python-based application designed to recognize and interpret hand signs representing letters of the American Sign Language alphabet. The application captures real-time input and outputs the corresponding letter to the terminal, making it a useful tool for learning and practicing ASL.",
-    stack: ["Python", "OpenCV"],
+    stack: ["Python", "OpenCV", "MediaPipe"],
   };
 
   const pl0CompilerContent = {
     title: "PL-0 compiler",
     description:
-      "This is a The PL/0 Compiler is a project developed entirely in C, designed to parse, analyze, and compile code written in a novel version of the PL/0 programming language. This compiler not only checks the grammar and syntax of the PL/0 code but also generates corresponding assembly code.",
+      "The PL-0 Compiler is a project developed entirely in C, designed to parse, analyze, and compile code written in a novel version of the PL/0 programming language. This compiler not only checks the grammar and syntax of the PL/0 code but also generates corresponding assembly code.",
     stack: ["C"],
   };
 
