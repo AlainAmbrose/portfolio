@@ -20,8 +20,8 @@ function ProjectsPage() {
   const distributedWebAppContent = {
     title: "C.R.U.D",
     description:
-      "C.R.U.D allows users to read existing records, update information, and delete records related to Olympic events and NASCAR races.  Built as a distributed web application, C.R.U.D utilizes Java Servlets and the Tomcat server to handle client requests and manage data across multiple layers. The frontend of the application was developed using HTML and CSS, providing a clean and user-friendly interface. ",
-    stack: ["Java", "Tomcat"],
+      "C.R.U.D is a multi-tier web app that allows users to read existing records, update information, and delete records related to Olympic events and NASCAR races.  Built as a distributed system, C.R.U.D utilizes Java Servlets and the Tomcat server to handle client requests and manage data across multiple layers. The frontend of the application was developed using HTML and CSS, providing a clean and user-friendly interface. ",
+    stack: ["Java", "Tomcat", "HTML", "CSS"],
   };
 
   const handSignInterpreterContent = {

@@ -40,6 +40,7 @@ function ExperiencePage() {
     flexDirection: "row",
     justifyContent: "left",
     overflow: "scroll",
+    scrollbarWidth: "none",
     marginTop: "2vh",
   };
 
@@ -57,6 +58,7 @@ function ExperiencePage() {
         ],
       },
     ],
+    technologies: ["TypeScript", "CircleCI", "YAML", "Node.js"],
   };
 
   const creditKarmaContent2 = {
@@ -73,6 +75,7 @@ function ExperiencePage() {
         ],
       },
     ],
+    technologies: ["Scala", "Kafka", "Big Query", "Splunk"],
   };
 
   const nsbeUCFContent = {
@@ -88,6 +91,7 @@ function ExperiencePage() {
         ],
       },
     ],
+    technologies: ["TypeScript", "React-Native"],
   };
 
   return (
