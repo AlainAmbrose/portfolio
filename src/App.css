@@ -313,6 +313,7 @@ ul { padding:0; list-style: none;}
   transform: scale(0.95);
   transition: transform 0.15s ease-in;
   opacity: 0.85;
+  overflow: scroll;
 }
 
 /* Scale up the popup when the overlay is open */
@@ -412,7 +413,9 @@ ul { padding:0; list-style: none;}
 }
 
 .socialMediaLinks {
-  flex: 0 0 5%;
+  position: absolute;
+  bottom: 6vh;
+  left: 7.5vh;
   height: fit-content;
 }
 
