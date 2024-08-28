@@ -8,12 +8,6 @@ import { useEffect, useState } from "react";
 
 const App = () => {
   const [isMobile, setIsMobile] = useState(false);
-  const [visiblePage, setVisiblePage] = useState([
-    "Landing",
-    "About",
-    "Projects",
-    "Experience",
-  ]);
 
   useEffect(() => {
     const checkIfMobile = () => {
