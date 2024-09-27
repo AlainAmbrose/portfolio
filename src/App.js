@@ -1,5 +1,4 @@
 import "./App.css";
-import HomePage from "./pages/HomePage.js";
 import LandingPage from "./pages/LandingPage.js";
 import AboutPage from "./pages/AboutPage.js";
 import ProjectsPage from "./pages/ProjectsPage.js";
@@ -36,7 +35,6 @@ const App = () => {
     <Router>
       <Routes>
         <Route path="/" element={<LandingPage />} />
-        <Route path="/home" element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/projects" element={<ProjectsPage />} />
         <Route path="/experience" element={<ExperiencePage />} />
