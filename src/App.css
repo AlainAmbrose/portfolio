@@ -1,12 +1,14 @@
 body {
-	background: linear-gradient(-45deg, #002e1f9f, #003e29, #002e1f9f);
-  /*old*/
-  /* background: linear-gradient(-45deg, #41583a00, #114502d7, #01460100); */
+	/* background: linear-gradient(-45deg, #002e1f9f, #003e29, #002e1f9f); */
+  background: linear-gradient(-45deg, #0065449f, #004d34, #0065449f);
 	background-size: 400% 400%;
   overflow: hidden;
 	animation: gradient 15s ease infinite;
   font-family: 'JetBrains Mono', monospace;
   margin: 0;
+  overflow: scroll;
+  /* background-color: #003e29; */
+  background-color: #005338; 
 }
 
 @keyframes gradient {
@@ -38,7 +40,23 @@ body {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+  box-shadow: 20px 20px 20px #002e1ff6;
+}
+
+.backgroundBoxV2 {
+  margin: 2.5vh;
+  /* padding: 30px; */
+  padding: 5vh;
+  height: fit-content;
+  box-sizing: border-box;
+  border-radius: 10px;
+  background-color: #002e1f9f;
+  opacity: 0.55;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
   box-shadow: 10px 10px 10px #002e1ff6;
+  overflow: scroll;
 }
 
 .innerBackground {
@@ -48,6 +66,13 @@ body {
   display: flex;
   justify-content: space-between;
   flex: 0 0 100%;
+}
+
+.homeStructureBox {
+  display: flex;
+  height: fit-content;
+  justify-content: space-between;
+  flex-direction: column;
 }
 
 .pageHeader {
@@ -259,6 +284,7 @@ ul { padding:0; list-style: none;}
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
 .project-card:hover {
@@ -314,6 +340,7 @@ ul { padding:0; list-style: none;}
   transition: transform 0.15s ease-in;
   opacity: 0.85;
   overflow: scroll;
+  scrollbar-width: none;
 }
 
 /* Scale up the popup when the overlay is open */
@@ -398,14 +425,14 @@ ul { padding:0; list-style: none;}
 
 
 .navbar {
-  background-color: #002e1fef;
+  background-color: #004d34;
   opacity: 1;
   display: flex;
   justify-content: space-between;
   flex-direction: row;
   padding: 1vh;
   border-radius: 20px;
-  box-shadow: 10px 10px 10px rgb(10, 0, 0);
+  box-shadow: 10px 10px 10px rgba(10, 0, 0, 0.222);
   position: absolute;
   top: 5vh;
   right: 5vh;
