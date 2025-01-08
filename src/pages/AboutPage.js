@@ -20,7 +20,7 @@ function AboutPage() {
   };
 
   const descriptionStyle = {
-    flex: "0 0 75%",
+    flex: "0 0 85%",
     display: "flex",
     flexDirection: "row",
     justifyContent: "left",

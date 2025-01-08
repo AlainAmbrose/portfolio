@@ -35,7 +35,7 @@ function ExperiencePage() {
   };
 
   const skillsStyle = {
-    flex: "0 0 80%",
+    flex: "0 0 85%",
     display: "flex",
     flexDirection: "row",
     justifyContent: "left",

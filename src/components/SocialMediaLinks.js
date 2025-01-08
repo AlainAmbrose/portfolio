@@ -6,25 +6,34 @@ import InstagramWhite from "../images/instagram-green.svg";
 const SocialMediaLinks = () => {
   return (
     <div className="socialMediaLinks">
-      <a href="https://www.github.com/AlainAmbrose">
+      <a
+        href="https://www.github.com/AlainAmbrose"
+        style={{ height: "5vh", width: "5vh" }}
+      >
         <img
           src={GitHubWhite}
           alt="GitHub Link"
-          style={{ marginRight: "10px", height: "5vh", width: "5vh" }}
+          style={{ height: "5vh", width: "5vh" }}
         />
       </a>
-      <a href="https://www.linkedin.com/in/alain-ambrose">
+      <a
+        href="https://www.linkedin.com/in/alain-ambrose"
+        style={{ height: "5vh", width: "5vh" }}
+      >
         <img
           src={LinkedInWhite}
           alt="LinkedIn Link"
-          style={{ marginRight: "10px", height: "5vh", width: "5vh" }}
+          style={{ height: "5vh", width: "5vh" }}
         />
       </a>
-      <a href="https://www.instagram.com/alainambrose911/">
+      <a
+        href="https://www.instagram.com/alainambrose911/"
+        style={{ height: "5vh", width: "5vh" }}
+      >
         <img
           src={InstagramWhite}
           alt="Instagram Link"
-          style={{ marginRight: "10px", height: "5vh", width: "5vh" }}
+          style={{ height: "5vh", width: "5vh" }}
         />
       </a>
     </div>

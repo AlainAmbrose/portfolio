@@ -440,6 +440,13 @@ ul { padding:0; list-style: none;}
 }
 
 .socialMediaLinks {
+  background-color: #004d34;
+  opacity: 1;
+  display: flex;
+  justify-content: space-between;
+  padding: .5vh;
+  border-radius: 20px;
+  box-shadow: 10px 10px 10px rgba(10, 0, 0, 0.222);
   position: absolute;
   bottom: 6vh;
   left: 7.5vh;

@@ -38,11 +38,11 @@ function ProjectsPage() {
     stack: ["C"],
   };
 
-  const cueClashContent = {
-    title: "Cue Clash!",
+  const visualGeoLocatorContent = {
+    title: "Visual GeoLocator",
     description:
-      "Cue Clash! is an interactive web-based 8-ball pool game developed entirely in JavaScript. The game offers players a realistic and engaging online pool experience, complete with smooth animations and responsive gameplay.",
-    stack: ["C#", "Unity"],
+      "The Visual GeoLocator is a Python-based application that uses computer vision and 3D modeling to localize an image. The application leverages OpenGL to create a 3D model of the search space and Open Streem Map with Google Maps to extract geographical information from the image and predict the location where the it was taken.",
+    stack: ["Python", "OpenGL", "DracoPy"],
   };
 
   const projectContainerStyle = {
@@ -79,7 +79,7 @@ function ProjectsPage() {
           <ProjectCard content={distributedWebAppContent} />
           <ProjectCard content={handSignInterpreterContent} />
           <ProjectCard content={pl0CompilerContent} />
-          <ProjectCard content={cueClashContent} />
+          <ProjectCard content={visualGeoLocatorContent} />
         </div>
       </div>
     </div>
