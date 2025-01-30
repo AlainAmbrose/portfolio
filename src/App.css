@@ -1,6 +1,7 @@
 body {
 	/* background: linear-gradient(-45deg, #002e1f9f, #003e29, #002e1f9f); */
-  background: linear-gradient(-45deg, #0065449f, #004d34, #0065449f);
+  background: linear-gradient(-45deg, #00774f9f, #004d34, #00774f9f);
+  /* background: linear-gradient(-45deg, #00a46d9f, #004d34, #00a46d9f); */
 	background-size: 400% 400%;
   overflow: hidden;
 	animation: gradient 15s ease infinite;

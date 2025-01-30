@@ -1,6 +1,7 @@
 import "../App.css";
 import ProjectCard from "../components/ProjectCard";
 import Navbar from "../components/NavBar";
+import SocialMediaLinks from "../components/SocialMediaLinks";
 
 function ProjectsPage() {
   const topTierContent = {
@@ -82,6 +83,7 @@ function ProjectsPage() {
           <ProjectCard content={visualGeoLocatorContent} />
         </div>
       </div>
+      <SocialMediaLinks />
     </div>
   );
 }

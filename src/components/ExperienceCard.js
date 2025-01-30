@@ -23,7 +23,7 @@ const ExperienceCard = ({ content }) => {
               <ul>
                 {position.bullets.map((bullet, index) => (
                   <li
-                    style={{ marginBottom: "1rem", fontSize: "1.75vh" }}
+                    style={{ marginBottom: "1rem", fontSize: "2vh" }}
                     key={index}
                   >
                     {bullet}

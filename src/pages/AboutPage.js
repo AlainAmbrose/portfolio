@@ -63,13 +63,10 @@ function AboutPage() {
                 seriously applying this love for learning to computer science
                 concepts right before college. Since that point I have worked
                 every day to get better with my problem solving, critical
-                thinking, communication skills, and teamwork. I'm committed to
-                putting in effort to learn through work experience and am
-                looking forward to growing as I move forward.
+                thinking, communication skills, and teamwork.
               </p>
             </div>
           </div>
-          <SocialMediaLinks />
         </div>
         <div style={rightDivStyle}>
           <div style={{ flex: "0 0 8%" }}></div>
@@ -98,7 +95,6 @@ function AboutPage() {
               <ul className="info-list">
                 <li>Music</li>
                 <li>Skateboarding</li>
-                <li>Competitive Programming</li>
                 <li>Rock Climbing </li>
               </ul>
             </section>
